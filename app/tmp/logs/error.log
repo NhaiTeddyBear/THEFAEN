@@ -8519,3 +8519,113 @@ Stack Trace:
 #10 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FeedbacksController), Object(CakeRequest))
 #11 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2016-12-16 17:17:10 Error: [MissingControllerException] Controller class MoneyController could not be found.
+Exception Attributes: array (
+  'class' => 'MoneyController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/money
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-16 17:17:33 Error: [MissingControllerException] Controller class MoneyController could not be found.
+Exception Attributes: array (
+  'class' => 'MoneyController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/money
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-17 11:04:48 Error: Fatal Error (1): Call to undefined method View::Fa() in [C:\xampp\htdocs\thefaen\app\View\Layouts\managerCommon.ctp, line 74]
+2016-12-17 11:04:48 Error: [FatalErrorException] Call to undefined method View::Fa()
+Request URL: /thefaen/users/home
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 74)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 74, Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 74, Array)
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-12-17 13:05:23 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\xampp\htdocs\thefaen\app\View\Layouts\managerCommon.ctp, line 72]
+2016-12-17 13:05:23 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /thefaen/users/home
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 72)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 72, Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 72, Array)
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-12-17 13:07:40 Error: [MissingActionException] Action UsersController::i() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'i',
+)
+Request URL: /thefaen/users/i
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-12-17 13:08:47 Error: [MissingActionException] Action UsersController::i() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'i',
+)
+Request URL: /thefaen/users/i
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-12-17 13:09:08 Error: [MissingActionException] Action UsersController::i() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'i',
+)
+Request URL: /thefaen/users/i
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-12-17 13:09:39 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\thefaen\app\View\Layouts\managerCommon.ctp, line 72]
+2016-12-17 13:09:39 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /thefaen/users/home
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 72)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 72, Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 72, Array)
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-12-17 13:10:21 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\thefaen\app\View\Layouts\managerCommon.ctp, line 72]
+2016-12-17 13:10:22 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /thefaen/users/home
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 72)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 72, Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 72, Array)
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-12-17 15:30:24 Error: Fatal Error (4): syntax error, unexpected 'Paginator' (T_STRING) in [C:\xampp\htdocs\thefaen\app\Controller\FoodsController.php, line 157]
+2016-12-17 15:30:24 Error: [FatalErrorException] syntax error, unexpected 'Paginator' (T_STRING)
+Request URL: /thefaen/foods/indexOfMember
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 157)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 157, Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 157, Array)
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-12-17 16:35:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/img/login.png
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

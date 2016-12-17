@@ -7,10 +7,9 @@
 		echo $this->Form->input('phone_number', array('label'=>'Số điện thoại'));
 		echo $this->Form->input('email', array('label'=>'Email'));
 		echo $this->Form->input('content', array('label'=>'Nội dung'));
-		echo $this->Form->input('date_created', array('label'=>'Ngày tạo'));
 	?>
 	<div class="button-group">
 		<button type="submit" class="view-button btn view submit">Lưu</button>
-		<button type="button" class="cancel-button btn cancel"><?php echo $this->Html->link(__('Hủy'), array('action' => 'index')); ?></button>
+		<button type="button" class="cancel-button btn cancel"><?php echo $this->Html->link(__('Hủy'), array('controller'=>'users','action' => 'home')); ?></button>
 	</div>
 </div>

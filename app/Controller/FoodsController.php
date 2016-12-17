@@ -149,7 +149,7 @@ class FoodsController extends AppController{
      */
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add','edit', 'delete');
+        $this->Auth->allow('indexOfMember');
     }
     /**
      * function paginator
@@ -180,7 +180,8 @@ class FoodsController extends AppController{
             }
             return parent::isAuthorized($user);
         }
-
     }
+
+    
 }
 ?>

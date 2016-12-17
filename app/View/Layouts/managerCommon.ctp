@@ -6,10 +6,6 @@
     <title>The Faen</title>
     <link rel="stylesheet" href="/thefaen/css/normalize.css">
     <link rel="stylesheet" href="/thefaen/css/style.css">
-<!--    <link rel="stylesheet" href="/thefaen/css/bootstrap.css">-->
-<!--    <link rel="stylesheet" href="/thefaen/css/bootstrap.min.css">-->
-<!--    <link rel="stylesheet" href="/thefaen/css/bootstrap-theme.css">-->
-<!--    <link rel="stylesheet" href="/thefaen/css/bootstrap-theme.min.css">-->
     <script src="https://use.fontawesome.com/724d9feeda.js"></script>
 </head>
 
@@ -33,7 +29,7 @@
 
         <li><?php echo $this->Html->link(__('Trang chủ'), array('controller'=>'users', 'action'=>'home')); ?></li>
         <li><?php echo $this->Html->link(__('Thực đơn'), array('controller'=>'foods', 'action'=>'indexOfMember')); ?></li>
-        <li><?php echo $this->Html->link(__('Lien he'), array('controller'=>'feedbacks', 'action'=>'add')); ?></li></li>
+        <li><?php echo $this->Html->link(__('Liên hệ'), array('controller'=>'feedbacks', 'action'=>'add')); ?></li></li>
 
 <!--        <li class="dropdown">-->
 <!--            <a href="#" class="dropbtn">Quản lý</a>-->
@@ -52,7 +48,7 @@
 <!--                <!--                --><?php ////echo $this->Html->link(__('Quản lý lịch làm việc'), array('controller'=>'staff_schedule', 'action'=>'index')); ?>
 <!--            </div>-->
 <!--        </li>-->
-        <li class="dropdown">
+        <li>
             <?php  if(isset($_SESSION['Auth']['User'])) { ?>
                 <?php
                 echo $this->Html->image('/img/avatar.jpg', array('alt' => 'user-avatar', 'class' => 'avatar', 'url' => array('controller' => 'users', 'action' => 'viewProfile')));
@@ -66,15 +62,30 @@
                     <?php echo $this->Html->link(__('Quản lý 2'), array('controller' => 'users', 'action' => 'indexOfManager')); ?>
                     <?php echo $this->Html->link(__('Đăng xuất'), array('controller' => 'users', 'action' => 'logout')); ?>
                 </div>
+        </li>
+    </ul>
                 <?php
                     }
-                    else{
-                        echo $this->Html->image('/img/login-13.jpg', array('alt' => 'user-avatar', 'class' => 'login-ava', 'url' => array('controller' => 'users', 'action' => 'login')));
+                    else{?>
+                        <li><?php echo '<a href="/users/login">'.$this->Html->image('/img/login.png', array('alt' => 'Đăng nhập', 'class'=>'login-icon')).'</a>';
+                            ?></li>
+<!--                        <li>--><?php //echo $this->Html->tag('i', '',array('class'=>'fa fa-sign-in fa-2x'));?><!--</li>-->
+<!--<!--                        <li>--><?php ////echo $this->Html->link(__('Đăng nhập'), array('controller' => 'users', 'action' => 'login'));?><!--<!--</li>-->
+
+<?php
+
+//                        echo $this->Html->link(__('Đăng nhập'), array(
+//                                            'controller' => 'users',
+//                                            'action' => 'login',
+//                                            ));
+//                        echo $this->Html->link(__("<i class='fa fa-sign-in'></i>"." Đăng nhập"), array('url' => array('controller' => 'users', 'action' => 'login')));
+//                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+//                        echo $this->Html->fa(__('Đăng nhập'),array('class'=>'fa fa-sign-in','url'=>array('controller' => 'users', 'action' => 'login')));
                     }
                 ?>
 
-        </li>
-    </ul>
+
+
 </header><!--/.main-header-->
 
 <div> <?php echo $this->fetch('content'); ?></div>
@@ -103,3 +114,11 @@
 <script src="/thefaen/js/modal.js"></script>
 </body>
 </html>
+
+<style>
+    .login-icon {
+        width: 20px;
+        height: 22px;
+    }
+
+</style>
