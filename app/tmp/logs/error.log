@@ -8629,3 +8629,25 @@ Request URL: /thefaen/img/login.png
 Stack Trace:
 #0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-12-18 06:26:16 Error: [MissingActionException] Action FeedbacksController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'FeedbacksController',
+  'action' => 'index.html',
+)
+Request URL: /thefaen/feedbacks/index.html
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FeedbacksController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-12-18 06:27:39 Error: [MissingActionException] Action FeedbacksController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'FeedbacksController',
+  'action' => 'index.html',
+)
+Request URL: /thefaen/feedbacks/index.html
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FeedbacksController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

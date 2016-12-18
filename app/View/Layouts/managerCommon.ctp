@@ -11,7 +11,7 @@
 
 <body>
 <header class="main-header">
-    <h1 class="name"><a href="index.html" class="selected"><img src="/thefaen/img/logo.png" alt="Logo"></a></h1>
+    <h1 class="name"><a href="/thefaen/users/home" class="selected"><img src="/thefaen/img/logo.png" alt="Logo"></a></h1>
     <ul class="main-nav">
         <div class="container">
             <div class="row1">
