@@ -1,21 +1,5 @@
-<div class="users view row">
-    <p></p>
+<div class="row">
     <h1 class="staff-manage">Thông tin cá nhân</h1>
-
-    <div class="notification-home">
-        <h2>
-            <?php
-                echo $this->Flash->render('editProfileSuccess');
-                echo $this->Flash->render('editProfileFailure')
-            ?>
-        </h2>
-    </div>
-
-    <div class="col-md-4 left-ava">
-        <img src="<?php echo $this->webroot.'avatar/'.$user['User']['avatar']; ?>" width="200" height="250"/>
-    </div>
-
-    <div class=" right-info">
         <dl>
             <dt><?php echo __('Họ và tên'); ?></dt>
             <dd>
@@ -41,8 +25,10 @@
             <dd>
                 <?php echo h($user['User']['created']); ?>
             </dd>
-
-
+            <dt><?php echo __('Ảnh đại diện'); ?></dt>
+            <dd>
+                <img src="<?php echo $this->webroot.'avatar/'.$user['User']['avatar']; ?>" width="100" height="100"/>
+            </dd>
             <div class="actions button-group">
                 <button type="button" class="modify-button btn modify">
                     <?php echo $this->Html->link(__('Sửa'), array('action' => 'editProfile', $user['User']['id'])); ?>
@@ -50,7 +36,7 @@
                 <button type="button" class="cancel-button btn cancel"><?php echo $this->Html->link(__('Hủy'), array('action' => 'home')); ?></button>
             </div>
         </dl>
-    </div>
+  
 </div>
 
 

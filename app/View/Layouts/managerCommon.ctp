@@ -29,8 +29,8 @@
 
         <li><?php echo $this->Html->link(__('Trang chủ'), array('controller'=>'users', 'action'=>'home')); ?></li>
         <li><?php echo $this->Html->link(__('Thực đơn'), array('controller'=>'foods', 'action'=>'indexOfMember')); ?></li>
-        <li><?php echo $this->Html->link(__('Tin tức'), array('controller'=>'foods', 'action'=>'indexOfMember')); ?></li>
-        <li><?php echo $this->Html->link(__('Giới thiệu'), array('controller'=>'foods', 'action'=>'indexOfMember')); ?></li>
+        <li><?php echo $this->Html->link(__('Tin tức'), array('controller'=>'posts', 'action'=>'index')); ?></li>
+        <li><?php echo $this->Html->link(__('Giới thiệu'), array('controller'=>'information', 'action'=>'view')); ?></li>
         <li><?php echo $this->Html->link(__('Liên hệ'), array('controller'=>'feedbacks', 'action'=>'add')); ?></li></li>
 
 <!--        <li class="dropdown">-->
@@ -59,8 +59,13 @@
                 echo '<div class="dropdown-content">';
                 echo $this->Html->link(__('Tài khoản'), array('controller' => 'users', 'action' => 'viewProfile'));
                 echo $this->Html->link(__('Đơn hàng'), array('controller' => 'orders', 'action' => 'indexOfMember'));
-                echo $this->Html->link(__('Quản lý 1'), array('controller' => 'users', 'action' => 'indexOfStaff'));
-                echo $this->Html->link(__('Quản lý 2'), array('controller' => 'users', 'action' => 'indexOfManager'));
+
+                if(isset($user) && $user['role'] == 'Staff'){
+                    echo $this->Html->link(__('Quản lý 1'), array('controller' => 'users', 'action' => 'indexOfStaff'));
+                }
+                if(isset($user) && $user['role'] == 'Manager') {
+                    echo $this->Html->link(__('Quản lý 2'), array('controller' => 'users', 'action' => 'indexOfManager'));
+                }
                 echo $this->Html->link(__('Đăng xuất'), array('controller' => 'users', 'action' => 'logout'));
                 echo '</div>';
             ?>

@@ -8651,3 +8651,87 @@ Stack Trace:
 #1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FeedbacksController), Object(CakeRequest))
 #2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2016-12-18 13:48:08 Error: [MissingActionException] Action InformationController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'InformationController',
+  'action' => 'index',
+)
+Request URL: /thefaen/information
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InformationController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-12-18 13:48:57 Error: [MissingActionException] Action InformationController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'InformationController',
+  'action' => 'index',
+)
+Request URL: /thefaen/information
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InformationController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-12-18 14:23:41 Error: [MissingActionException] Action FoodsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'FoodsController',
+  'action' => 'index',
+)
+Request URL: /thefaen/foods
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FoodsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-12-18 14:25:58 Error: [MissingActionException] Action FoodsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'FoodsController',
+  'action' => 'index',
+)
+Request URL: /thefaen/foods
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FoodsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-12-18 14:40:57 Error: [MissingActionException] Action InformationController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'InformationController',
+  'action' => 'index',
+)
+Request URL: /thefaen/information
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InformationController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-12-18 14:51:20 Error: [MissingActionException] Action InformationController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'InformationController',
+  'action' => 'index',
+)
+Request URL: /thefaen/information
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InformationController), Object(CakeRequest))
+#2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-12-18 15:14:24 Error: [MissingControllerException] Controller class AvatarController could not be found.
+Exception Attributes: array (
+  'class' => 'AvatarController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/avatar/1416283892-bun-thit-nuong-4.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-18 15:16:33 Error: [MissingControllerException] Controller class AvatarController could not be found.
+Exception Attributes: array (
+  'class' => 'AvatarController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/avatar/tra_dao.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

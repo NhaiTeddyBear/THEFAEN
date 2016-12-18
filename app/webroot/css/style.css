@@ -190,8 +190,7 @@ input[type="search"],
 input[type="tel"],
 input[type="time"],
 input[type="url"],
-textarea,
-select {
+textarea {
     border: none;
     font-size: 1em;
     height: auto;
@@ -205,20 +204,18 @@ select {
     color: #8a97a0;
 }
 
-/*input[type="date"]{*/
-    /*border: none;*/
-    /*font-size: 1em;*/
-    /*height: auto;*/
-    /*margin: 5px 0 10px;*/
-    /*margin-top: 5px;*/
-    /*outline: 0;*/
-    /*padding: 10px;*/
-    /*width: 30%;*/
-    /*background-color: #e8eeef;*/
-    /*opacity: .8;*/
-    /*color: #8a97a0;*/
-/*}*/
-
+select {
+    border: none;
+    font-size: 1em;
+    height: auto;
+    margin: 5px 3px 10px;
+    outline: 0;
+    padding: 10px;
+    width: 25%;
+    background-color: #e8eeef;
+    opacity: .8;
+    color: #8a97a0;
+}
 .login-button {
     color: #fff;
     text-align: center;
@@ -787,4 +784,11 @@ hr.style18:before {
 }
 .comment h3 {
 
+}
+
+.avatar {
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 18px;
+    height: 17px;
 }
