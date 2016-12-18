@@ -8735,3 +8735,84 @@ Request URL: /thefaen/avatar/tra_dao.jpg
 Stack Trace:
 #0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-12-18 17:01:12 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/home
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-18 17:01:58 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-18 17:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-18 17:02:11 Error: [MissingControllerException] Controller class DjksfhkController could not be found.
+Exception Attributes: array (
+  'class' => 'DjksfhkController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/djksfhk
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-18 17:03:04 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-18 17:03:20 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-18 17:03:49 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-18 17:05:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-18 17:08:47 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/home
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

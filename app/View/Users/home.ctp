@@ -130,7 +130,7 @@
                 ?>
             </div>
             <div class="right2">
-                <img src="/thefaen/img/spaghetti.jpg" alt="Spaghetti" class="img-fluid">
+                <img src="/thefaen/img/spaghetti.jpg" alt="Spaghetti" class="img-100">
             </div>
         </div>
     </div>

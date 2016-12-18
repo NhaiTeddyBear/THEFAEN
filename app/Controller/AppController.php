@@ -45,7 +45,7 @@ class AppController extends Controller
             ),
             'logoutRedirect' => array(
                 'controller' => 'users',
-                'action' => 'login'
+                'action' => 'home'
             ),
             'authenticate' => array(
                 'Form' => array(

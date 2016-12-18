@@ -59,13 +59,8 @@
                 echo '<div class="dropdown-content">';
                 echo $this->Html->link(__('Tài khoản'), array('controller' => 'users', 'action' => 'viewProfile'));
                 echo $this->Html->link(__('Đơn hàng'), array('controller' => 'orders', 'action' => 'indexOfMember'));
-
-                if(isset($user) && $user['role'] == 'Staff'){
-                    echo $this->Html->link(__('Quản lý 1'), array('controller' => 'users', 'action' => 'indexOfStaff'));
-                }
-                if(isset($user) && $user['role'] == 'Manager') {
-                    echo $this->Html->link(__('Quản lý 2'), array('controller' => 'users', 'action' => 'indexOfManager'));
-                }
+                echo $this->Html->link(__('Quản lý 1'), array('controller' => 'users', 'action' => 'indexOfStaff'));
+                echo $this->Html->link(__('Quản lý 2'), array('controller' => 'users', 'action' => 'indexOfManager'));
                 echo $this->Html->link(__('Đăng xuất'), array('controller' => 'users', 'action' => 'logout'));
                 echo '</div>';
             ?>

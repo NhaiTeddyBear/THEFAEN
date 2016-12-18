@@ -25,7 +25,7 @@ class UsersController extends AppController {
 					$this->redirect(array('action'=>'indexOfStaff'));
 				}
 				if($this->Auth->user('role') === 'Member'){
-					$this->redirect(array('controller'=>'users', 'action'=>'home'));
+					$this->redirect(array('action'=>'home'));
 				}
 			}
 			else {
@@ -245,7 +245,7 @@ class UsersController extends AppController {
 
 	public function listMember() {
 		$this->Paginator->settings = array(
-			'limit' => 5,
+			'limit' => 15,
 			'conditions'=>array('role'=>'Member'),
 			'order' => array(
 				'id' => 'desc'

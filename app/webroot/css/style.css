@@ -559,6 +559,10 @@ dt {
 }
 
 .img-fluid {
+    max-width: 70%;
+}
+
+.img-100 {
     max-width: 100%;
 }
 
@@ -791,4 +795,16 @@ hr.style18:before {
     border-radius: 50%;
     width: 18px;
     height: 17px;
+}
+/* AVATAR + LOGOUT ICON */
+.avatar {
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 18px;
+    height: 17px;
+}
+
+.login-icon {
+    width: 18px !important;
+    height: 17px !important;
 }

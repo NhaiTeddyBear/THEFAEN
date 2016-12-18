@@ -27,6 +27,7 @@
     }
 
     .right{
-        floar: right;
+        float: right;
+
     }
 </style>
