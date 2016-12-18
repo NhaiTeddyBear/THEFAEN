@@ -67,7 +67,7 @@
                 <?php
                     }
                     else{?>
-                        <li><?php echo '<a href="/users/login">'.$this->Html->image('/img/login.png', array('alt' => 'Đăng nhập', 'class'=>'login-icon')).'</a>';
+                        <li><?php echo '<a href="/thefaen/users/login">'.$this->Html->image('/img/login.png', array('alt' => 'Đăng nhập', 'class'=>'login-icon')).'</a>';
                             ?></li>
 <!--                        <li>--><?php //echo $this->Html->tag('i', '',array('class'=>'fa fa-sign-in fa-2x'));?><!--</li>-->
 <!--<!--                        <li>--><?php ////echo $this->Html->link(__('Đăng nhập'), array('controller' => 'users', 'action' => 'login'));?><!--<!--</li>-->
