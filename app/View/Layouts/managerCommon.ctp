@@ -29,6 +29,8 @@
 
         <li><?php echo $this->Html->link(__('Trang chủ'), array('controller'=>'users', 'action'=>'home')); ?></li>
         <li><?php echo $this->Html->link(__('Thực đơn'), array('controller'=>'foods', 'action'=>'indexOfMember')); ?></li>
+        <li><?php echo $this->Html->link(__('Tin tức'), array('controller'=>'foods', 'action'=>'indexOfMember')); ?></li>
+        <li><?php echo $this->Html->link(__('Giới thiệu'), array('controller'=>'foods', 'action'=>'indexOfMember')); ?></li>
         <li><?php echo $this->Html->link(__('Liên hệ'), array('controller'=>'feedbacks', 'action'=>'add')); ?></li></li>
 
 <!--        <li class="dropdown">-->
@@ -49,25 +51,26 @@
 <!--            </div>-->
 <!--        </li>-->
         <li>
+            <div class="dropdown">
             <?php  if(isset($_SESSION['Auth']['User'])) { ?>
                 <?php
                 echo $this->Html->image('/img/avatar.jpg', array('alt' => 'user-avatar', 'class' => 'avatar', 'url' => array('controller' => 'users', 'action' => 'viewProfile')));
-                ?>
 
-
-                <div class="dropdown-content">
-                    <?php echo $this->Html->link(__('Tài khoản'), array('controller' => 'users', 'action' => 'viewProfile')); ?>
-                    <?php echo $this->Html->link(__('Đơn hàng'), array('controller' => 'orders', 'action' => 'indexOfMember')); ?>
-                    <?php echo $this->Html->link(__('Quản lý 1'), array('controller' => 'users', 'action' => 'indexOfStaff')); ?>
-                    <?php echo $this->Html->link(__('Quản lý 2'), array('controller' => 'users', 'action' => 'indexOfManager')); ?>
-                    <?php echo $this->Html->link(__('Đăng xuất'), array('controller' => 'users', 'action' => 'logout')); ?>
-                </div>
+                echo '<div class="dropdown-content">';
+                echo $this->Html->link(__('Tài khoản'), array('controller' => 'users', 'action' => 'viewProfile'));
+                echo $this->Html->link(__('Đơn hàng'), array('controller' => 'orders', 'action' => 'indexOfMember'));
+                echo $this->Html->link(__('Quản lý 1'), array('controller' => 'users', 'action' => 'indexOfStaff'));
+                echo $this->Html->link(__('Quản lý 2'), array('controller' => 'users', 'action' => 'indexOfManager'));
+                echo $this->Html->link(__('Đăng xuất'), array('controller' => 'users', 'action' => 'logout'));
+                echo '</div>';
+            ?>
+            </div>
         </li>
     </ul>
                 <?php
                     }
                     else{?>
-                        <li><?php echo '<a href="/thefaen/users/login">'.$this->Html->image('/img/login.png', array('alt' => 'Đăng nhập', 'class'=>'login-icon')).'</a>';
+                        <li><?php echo '<a href="/thefaen/users/login">'.$this->Html->image('/img/login.png', array('title'=>'Đăng nhập', 'name'=>'Đăng nhập','alt' => 'Đăng nhập', 'class'=>'login-icon')).'</a>';
                             ?></li>
 <!--                        <li>--><?php //echo $this->Html->tag('i', '',array('class'=>'fa fa-sign-in fa-2x'));?><!--</li>-->
 <!--<!--                        <li>--><?php ////echo $this->Html->link(__('Đăng nhập'), array('controller' => 'users', 'action' => 'login'));?><!--<!--</li>-->
@@ -119,6 +122,12 @@
     .login-icon {
         width: 20px;
         height: 22px;
+    }
+
+    .login-icon:hover{
+        background-image: url('/img/login-1.png');
+        color: blue;
+        background-color: #fff;
     }
 
 </style>

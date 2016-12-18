@@ -362,6 +362,10 @@ th {
     cursor: pointer;
 }
 
+.btn a{
+    color: white;
+}
+
 .view-button {
     background-color: #54ba54;
 }
