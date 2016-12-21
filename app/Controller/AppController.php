@@ -35,6 +35,16 @@ class AppController extends Controller
     public $helpers = array('Form', 'Html', 'Flash');
     public $layout ='managerCommon';
 
+    public function setHeader($user){
+
+        if ($user['role'] == 'Manager'){
+            $this->set('manager', $user);
+        }
+        if ($user['role'] == 'Staff'){
+            $this->set('staff', $user);
+        }
+    }
+
     public $components = array(
         'Flash',
         'Paginator',

@@ -21,6 +21,8 @@ class CommentsController extends AppController {
  * @return void
  */
 	public function index() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$this->Comment->recursive = 0;
 		$this->set('comments', $this->Paginator->paginate());
 	}
@@ -33,6 +35,8 @@ class CommentsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Comment->exists($id)) {
 			throw new NotFoundException(__('Invalid comment'));
 		}
@@ -46,6 +50,8 @@ class CommentsController extends AppController {
  * @return void
  */
 	public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if ($this->request->is('post')) {
 			$this->Comment->create();
 			if ($this->Comment->save($this->request->data)) {
@@ -68,6 +74,8 @@ class CommentsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Comment->exists($id)) {
 			throw new NotFoundException(__('Invalid comment'));
 		}

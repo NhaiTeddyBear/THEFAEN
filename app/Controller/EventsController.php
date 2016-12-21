@@ -6,17 +6,21 @@ class EventsController extends AppController{
 
     // for view all products
    public function index() {
-    $this->paginate = array(
-        'limit' => 10,
-        'order' => array(
-            'id' => 'desc'
-        )
-    );
-    $this->set('events', $this->Paginator->paginate('Event'));
+       $user = $this->Auth->user();
+       $this->setHeader($user);
+        $this->paginate = array(
+            'limit' => 10,
+            'order' => array(
+                'id' => 'desc'
+            )
+        );
+        $this->set('events', $this->Paginator->paginate('Event'));
    }
     //when people click on name of any products, this will show them all information
     //of that product
     public function view($id=null){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if(!$id){
             throw new NotFoundException(__('Invalid product'));
         }
@@ -30,6 +34,8 @@ class EventsController extends AppController{
      * function add to add more Foods
      */
     public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if ($this->request->is('post')) {
             $this->Event->create();
             if ($this->Event->save($this->request->data)) {
@@ -43,6 +49,8 @@ class EventsController extends AppController{
      * function edit
      */
     public function edit($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if (!$id) {
             throw new NotFoundException(__('Invalid event'));
         }

@@ -7,22 +7,18 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class UsersController extends AppController {
-
-
 /**
 * @param array $user
 * @return redirect to their page by role
 */
-
-
-	public function login() {
+    public function login() {
 		if($this->request->is('post')){
 			if($this->Auth->login()){
 				if($this->Auth->user('role') === 'Manager'){
-					$this->redirect(array('action'=>'indexOfManager'));
+					$this->redirect(array('action'=>'home'));
 				}
 				if($this->Auth->user('role') === 'Staff'){
-					$this->redirect(array('action'=>'indexOfStaff'));
+					$this->redirect(array('action'=>'home'));
 				}
 				if($this->Auth->user('role') === 'Member'){
 					$this->redirect(array('action'=>'home'));
@@ -51,6 +47,8 @@ class UsersController extends AppController {
 	 * list manager
 	 */
 	public function listManager() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$this->set('users', $this->User->find('all', array('conditions'=>array('role'=>'Manager'))));
 	}
 
@@ -58,6 +56,8 @@ class UsersController extends AppController {
 	 * @ add new manger
 	 */
 	public function addManager(){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if ($this->request->is('post')) {
 			$this->User->create();
             //add avatar
@@ -88,6 +88,8 @@ class UsersController extends AppController {
 	}
 
 	public function editManager($id = null){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Người dùng không hợp lệ'));
 		}
@@ -142,20 +144,12 @@ class UsersController extends AppController {
 		$this->redirect(array('action' => 'listManager'));
 	}
 
-	/*********************************/
-
-	/**
-	 * @return index page of admin
-	 */
-	public function indexOfManager(){
-
-	}
-
-
 	/**
 	 * list all staff
 	 */
 	public function listStaff() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$this->paginate = array(
 			'limit' => 5,
 			'conditions'=>array('role'=>'Staff'),
@@ -166,11 +160,12 @@ class UsersController extends AppController {
 		$this->set('users', $this->Paginator->paginate('User'));
 	}
 
-
 	/**
 	 * @param $id
 	 */
 	public function viewManager($id){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$id) {
 			throw new NotFoundException(__('Invalid post'));
 		}
@@ -190,6 +185,8 @@ class UsersController extends AppController {
  * @return void
  */
 	public function viewStaff($id) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$id) {
 			throw new NotFoundException(__('Invalid post'));
 		}
@@ -207,6 +204,8 @@ class UsersController extends AppController {
  * @return void
  */
 	public function addStaff() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if ($this->request->is('post')) {
 			$this->User->create();
             //add avatar
@@ -246,6 +245,8 @@ class UsersController extends AppController {
  * @return void
  */
 	public function editStaff($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Người dùng không hợp lệ'));
 		}
@@ -312,6 +313,8 @@ class UsersController extends AppController {
 	 * @return this is the page of staff
 	 */
 	public function indexOfStaff(){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$this->set('users', $this->User->find('all', array('conditions'=>array('role'=>'Member'))));
 	}
 
@@ -324,6 +327,8 @@ class UsersController extends AppController {
 	 */
 
 	public function listMember() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$this->Paginator->settings = array(
 			'limit' => 15,
 			'conditions'=>array('role'=>'Member'),
@@ -336,6 +341,8 @@ class UsersController extends AppController {
 
 
 	public function viewMember($id) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$id) {
 			throw new NotFoundException(__('Invalid post'));
 		}
@@ -353,6 +360,8 @@ class UsersController extends AppController {
 	 * @return void
 	 */
 	public function addMember() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if ($this->request->is('post')) {
 			$this->User->create();
             //add avatar
@@ -392,6 +401,8 @@ class UsersController extends AppController {
 	 * @return void
 	 */
 	public function editMember($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Người dùng không hợp lệ'));
 		}
@@ -448,10 +459,15 @@ class UsersController extends AppController {
 
 		$this->redirect(array('action' => 'listMember'));
 	}
+
+
 	/**
 	 * @return this is the page of Member
 	 */
 	public function home(){
+        $user = $this->Auth->user();
+	    $this->setHeader($user);
+
 	    $this->loadModel('Food');
 
         //retrieve food information
@@ -484,15 +500,15 @@ class UsersController extends AppController {
             'food_id' => 97,
         );
         $this->request->data['Order']['food_id'] = 97;
-
 	}
-
 
 
 	/**
 	 * view personal profile
 	 */
 	public function viewProfile(){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$user = $this->User->findById($this->Auth->user('id'));
 		$this->set('user', $user);
 	}
@@ -501,6 +517,8 @@ class UsersController extends AppController {
 	 * edit personal profile
 	 */
 	public function editProfile($id = null){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if (!$this->User->exists($id)) {
             throw new NotFoundException(__('Người dùng không hợp lệ'));
         }
@@ -568,7 +586,6 @@ class UsersController extends AppController {
                     $this->request->data['User']['avatar'] = $file_name. '/' . $file['name'];
                 }
             }
-//            var_dump($this->request->data);die;
             if ($this->User->save($this->request->data)) {
                 $this->Flash->set('Tạo tài khoản mới thành công', array('key'=>'registerSuccess'));
                 $this->redirect(array('action' => 'home'));
@@ -577,10 +594,9 @@ class UsersController extends AppController {
         }
     }
 
-    public function beforeFilter() {
+    public function beforeFilter()
+    {
         parent::beforeFilter();
         $this->Auth->allow('register', 'home');
     }
-
-
 }

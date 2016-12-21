@@ -20,6 +20,8 @@ class PurchasesController extends AppController {
      */
 
     public function indexOfStaff() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         $this->Purchase->recursive = 0;
         $this->paginate = array(
             'limit' => 12,
@@ -32,6 +34,8 @@ class PurchasesController extends AppController {
 
 
     public function indexOfMember() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         $this->Purchase->recursive = 0;
         $this->paginate = array(
             'limit' => 12,
@@ -55,6 +59,8 @@ class PurchasesController extends AppController {
      * @return void
      */
     public function view($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if (!$this->Purchase->exists($id)) {
             throw new NotFoundException(__('Invalid purchase'));
         }
@@ -67,6 +73,8 @@ class PurchasesController extends AppController {
      * @return void
      */
     public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if ($this->request->is('post')) {
             $this->Purchase->create();
             /**
@@ -116,6 +124,8 @@ class PurchasesController extends AppController {
      * @return void
      */
     public function edit($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if (!$this->Purchase->exists($id)) {
             throw new NotFoundException(__('Invalid purchase'));
         }

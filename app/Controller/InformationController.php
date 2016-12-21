@@ -9,6 +9,8 @@ App::uses('AppController','Controller');
 class InformationController extends AppController {
 
     public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if ($this->request->is('post')) {
             $this->Ingredient->create();
             if ($this->Information->save($this->request->data)) {
@@ -20,11 +22,15 @@ class InformationController extends AppController {
         }
     }
     public function view(){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         $content = $this->Information->findById(1);
         $this->set('content', $content );
     }
 
     public function edit(){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         $content = $this->Information->findById(1);
         if($this->request->is(array('post', 'put'))){
             if($this->Information->save($this->request->data)){

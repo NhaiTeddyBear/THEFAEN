@@ -21,6 +21,9 @@ class OrdersController extends AppController {
      * @return void
      */
     public function indexOfStaff() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
+
         $this->Order->recursive = 0;
         $this->Paginator->settings = array(
             'limit' => 7,
@@ -33,6 +36,8 @@ class OrdersController extends AppController {
 
 
     public function indexOfMember() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         $this->Order->recursive = 0;
         $this->Paginator->settings = array(
             'limit' => 7,
@@ -54,6 +59,8 @@ class OrdersController extends AppController {
      * @return void
      */
     public function view($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if (!$this->Order->exists($id)) {
             throw new NotFoundException(__('Invalid order'));
         }
@@ -67,6 +74,8 @@ class OrdersController extends AppController {
      * @return void
      */
     public function addOfStaff() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if ($this->request->is('post')) {
             $this->Order->create();
 
@@ -109,6 +118,8 @@ class OrdersController extends AppController {
     }
 
     public function addOfMember($food_id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if ($this->request->is('post')) {
             $this->Order->create();
 
@@ -152,6 +163,8 @@ class OrdersController extends AppController {
      * @return void
      */
     public function edit($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if (!$this->Order->exists($id)) {
             throw new NotFoundException(__('Invalid order'));
         }

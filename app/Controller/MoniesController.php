@@ -21,6 +21,8 @@ class MoniesController extends AppController {
  * @return void
  */
 	public function indexOfManager1() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$this->Money->recursive = 0;
 		$this->set('monies', $this->Paginator->paginate());
 	}
@@ -33,6 +35,8 @@ class MoniesController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Money->exists($id)) {
 			throw new NotFoundException(__('Invalid money'));
 		}
@@ -46,6 +50,8 @@ class MoniesController extends AppController {
  * @return void
  */
 	public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if ($this->request->is('post')) {
 			$this->Money->create();
 
@@ -73,6 +79,8 @@ class MoniesController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Money->exists($id)) {
 			throw new NotFoundException(__('Invalid money'));
 		}

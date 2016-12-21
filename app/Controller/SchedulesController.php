@@ -21,6 +21,8 @@ class SchedulesController extends AppController {
  * @return void
  */
     public function indexOfManager1() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         $this->Paginator->settings = array(
             'limit' => 10,
             'order' => array(
@@ -32,6 +34,8 @@ class SchedulesController extends AppController {
 
 
     public function indexOfStaff(){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         $this->Paginator->settings = array(
             'limit' => 10,
             'order' => array(
@@ -52,6 +56,8 @@ class SchedulesController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Schedule->exists($id)) {
 			throw new NotFoundException(__('Invalid schedule'));
 		}
@@ -65,6 +71,8 @@ class SchedulesController extends AppController {
  * @return void
  */
 	public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if ($this->request->is('post')) {
 			$this->Schedule->create();
 
@@ -111,6 +119,8 @@ class SchedulesController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Schedule->exists($id)) {
 			throw new NotFoundException(__('Invalid schedule'));
 		}

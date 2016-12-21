@@ -15,6 +15,8 @@ class IngredientsController extends AppController {
  * @return void
  */
 	public function index() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$this->paginate = array(
 			'limit' => 5,
 			'order' => array(
@@ -31,6 +33,8 @@ class IngredientsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Ingredient->exists($id)) {
 			throw new NotFoundException(__('Invalid ingredient'));
 		}
@@ -44,6 +48,8 @@ class IngredientsController extends AppController {
  * @return void
  */
 	public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if ($this->request->is('post')) {
 			$this->Ingredient->create();
 			if ($this->Ingredient->save($this->request->data)) {
@@ -63,6 +69,8 @@ class IngredientsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Ingredient->exists($id)) {
 			throw new NotFoundException(__('Invalid ingredient'));
 		}

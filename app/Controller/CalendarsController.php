@@ -21,6 +21,8 @@ class CalendarsController extends AppController {
  * @return void
  */
 	public function index() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$this->Calendar->recursive = 0;
 		$this->set('calendars', $this->Paginator->paginate());
 	}
@@ -33,6 +35,8 @@ class CalendarsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Calendar->exists($id)) {
 			throw new NotFoundException(__('Invalid calendar'));
 		}
@@ -46,6 +50,8 @@ class CalendarsController extends AppController {
  * @return void
  */
 	public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if ($this->request->is('post')) {
 			$this->Calendar->create();
 			if ($this->Calendar->save($this->request->data)) {
@@ -67,6 +73,8 @@ class CalendarsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Calendar->exists($id)) {
 			throw new NotFoundException(__('Invalid calendar'));
 		}

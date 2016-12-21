@@ -414,7 +414,8 @@ dt {
 
 .view,
 .modify,
-.cancel {
+.cancel,
+.delete{
     padding: 5px 20px;
     margin: 20px;
 }

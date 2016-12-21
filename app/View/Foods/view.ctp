@@ -25,8 +25,7 @@
 
     <dd>
         <?php
-        $upload_dir = 'http://localhost/ISD_PROJECT/cakephp/app/webroot/upload/'. $food['Food']['image'];
-        echo "<img src='$upload_dir' alt='menu' width='200' height='200' />";
+            echo "<img src=".$this->webroot.'upload/'.$food["Food"]['image']." class = 'img-fluid'/>";
         ?>
     </dd>
 
@@ -53,7 +52,7 @@
         <button type="button" class="cancel-button btn cancel">
             <?php echo $this->Html->link(
                 'Hủy',
-                array('controller' => 'foods', 'action' => 'index')
+                array('controller' => 'foods', 'action' => 'indexOfMember')
             ); ?>
         </button>
 

@@ -7,6 +7,8 @@ class FoodsController extends AppController{
 
     // for view all products
     public function indexOfManager1() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         $this->Food->recursive = 0;
         $this->Paginator->settings = array(
             'limit' => 4,
@@ -19,7 +21,8 @@ class FoodsController extends AppController{
 
 
     public function indexOfMember(){
-
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if($food = $this->Food->findAllByCategory_id(3)) {
             $this->set('foods', $food);
         }
@@ -32,6 +35,8 @@ class FoodsController extends AppController{
     //when people click on name of any products, this will show them all information
     //of that product
     public function view($id=null){
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if(!$id){
             throw new NotFoundException(__('Invalid product'));
         }
@@ -45,6 +50,8 @@ class FoodsController extends AppController{
      * function add to add more Foods
      */
     public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if ($this->request->is('post')) {
             //create() : prepare for new place in database to store new data
             $this->Food->create();
@@ -87,6 +94,8 @@ class FoodsController extends AppController{
      * function edit
      */
     public function edit($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
         if (!$id) {
             throw new NotFoundException(__('Invalid product'));
         }
@@ -108,7 +117,9 @@ class FoodsController extends AppController{
                     //create new parameter to find name of that food
                     $file_name = date("Y-m-d");
                     //create new folder to store images
-                    mkdir(WWW_ROOT. 'upload/' . $file_name) ;
+                    if($file_name) {
+                        mkdir(WWW_ROOT . 'upload/' . $file_name);
+                    }
                     //upload directory
                     $upload_dir = WWW_ROOT . 'upload/'. $file_name. '/' .$file['name'];
                     //move an uploaded file to new location
@@ -142,14 +153,13 @@ class FoodsController extends AppController{
             $this->Flash->set('Không thể xóa món ăn này', array('key' => 'deleteFoodFailure'));
         }
         return $this->redirect(array('action' => 'indexOfManager1'));
-
     }
     /**
      * function beforefilter allow user do some action without logging in
      */
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('indexOfMember');
+        $this->Auth->allow('indexOfMember', 'search');
     }
     /**
      * function paginator
@@ -181,7 +191,5 @@ class FoodsController extends AppController{
             return parent::isAuthorized($user);
         }
     }
-
-    
 }
 ?>

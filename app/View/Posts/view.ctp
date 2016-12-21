@@ -15,7 +15,10 @@
 		<dt><?php echo __('Mục'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($post['Category']['name'], array('controller' => 'categories', 'action' => 'view', $post['Category']['id'])); ?>
-			&nbsp;
+		</dd>
+		<dt><?php echo __('Ảnh'); ?></dt>
+		<dd>
+			<img src="<?php echo $this->webroot.'post/'.$post['Post']['image']; ?>" class = "img-fluid" alt="Post"/>
 		</dd>
 		<dt><?php echo __('Nội dung'); ?></dt>
 		<dd>

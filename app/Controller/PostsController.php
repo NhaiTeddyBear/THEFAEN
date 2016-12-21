@@ -129,8 +129,6 @@ class PostsController extends AppController {
 		$this->loadModel('Comment', 'User');
 		$comments = $this->Post->Comment->find('all', array('conditions'=>array('post_id'=>$id)));
 		$this->set('comments', $comments);
-//		$this->set('username', $this->Post->Comment->whoOwnComment($comments['id']));
-
 		if ($this->request->is('post')) {
 			$this->Post->Comment->create();
 			if ($this->Post->Comment->save($this->request->data)) {
@@ -140,9 +138,6 @@ class PostsController extends AppController {
 				$this->Flash->error(__('The comment could not be saved. Please, try again.'));
 			}
 		}
-//		$users = $this->Comment->User->find('list');
-//		$posts = $this->Comment->Post->find('list');
-//		$this->set(compact('users', 'posts'));
 	}
 
 
@@ -162,11 +157,20 @@ class PostsController extends AppController {
 			}
 		}
 
+        if(isset($user) && $user['role'] == 'Manager') {
+            if (in_array($this->action, array('add', 'view', 'index', 'userView', 'read'))) {
+                return true;
+            }
+
+            // The owner of a post can edit and delete it
+            if (in_array($this->action, array('edit', 'delete'))) {
+                $postId = (int)$this->request->params['pass'][0];
+                if ($this->Post->isOwnedBy($postId, $user['id'])) {
+                    return true;
+                }
+            }
+        }
+
 		return parent::isAuthorized($user);
 	}
-
-    public function beforeFilter() {
-        parent::beforeFilter();
-        $this->Auth->allow('userView');
-    }
 }

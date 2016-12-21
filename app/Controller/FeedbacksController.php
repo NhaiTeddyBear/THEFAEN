@@ -21,6 +21,8 @@ class FeedbacksController extends AppController {
  * @return void
  */
 	public function index() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$this->Feedback->recursive = 0;
 		$this->set('feedback', $this->Paginator->paginate());
 	}
@@ -33,6 +35,8 @@ class FeedbacksController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Feedback->exists($id)) {
 			throw new NotFoundException(__('Invalid feedback'));
 		}
@@ -46,6 +50,8 @@ class FeedbacksController extends AppController {
  * @return void
  */
 	public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if ($this->request->is('post')) {
 			$this->Feedback->create();
 			if ($this->Feedback->save($this->request->data)) {

@@ -23,6 +23,8 @@ class CategoriesController extends AppController {
  * @return void
  */
 	public function index() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		$this->paginate = array(
 			'limit' => 5,
 			'order' => array(
@@ -40,6 +42,8 @@ class CategoriesController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Category->exists($id)) {
 			throw new NotFoundException(__('Invalid category'));
 		}
@@ -53,6 +57,8 @@ class CategoriesController extends AppController {
  * @return void
  */
 	public function add() {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if ($this->request->is('post')) {
 			$this->Category->create();
 			if ($this->Category->save($this->request->data)) {
@@ -72,6 +78,8 @@ class CategoriesController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        $user = $this->Auth->user();
+        $this->setHeader($user);
 		if (!$this->Category->exists($id)) {
 			throw new NotFoundException(__('Invalid category'));
 		}
