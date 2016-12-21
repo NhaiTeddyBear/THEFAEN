@@ -19,8 +19,11 @@
 
 <div class="today">
     <h1>HÔM NAY ĂN GÌ</h1>
+    <?php for($i=2; $i<7; $i++){?>
+    <hr class="style18">
     <div class="menu clearfix">
 
+        <h2 class="food">THỨ <?php echo $i;?></h2>
         <div class="col-sm-4">
             <h3><?php echo $food88['Food']['name']; ?></h3>
             <?php
@@ -93,6 +96,9 @@
             );
             ?>
         </div>
+
+        </div>
+    <?php }?>
     </div>
 
     <div class="new clearfix">
@@ -132,11 +138,10 @@
             <div class="right2">
                 <img src="/thefaen/img/spaghetti.jpg" alt="Spaghetti" class="img-100">
             </div>
-        </div>
+
+
     </div>
 
 </div>
 <!--  End Main Section  -->
-<style>
 
-</style>

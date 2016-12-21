@@ -41,11 +41,12 @@
 	));
 	?>	</p>
 	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
+		<?php
+		echo $this->Paginator->prev('« Trước ', null, null, array('class' => 'disabled')); //Shows the next and previous links
+		echo " | ".$this->Paginator->numbers()." | "; //Shows the page numbers
+		echo $this->Paginator->next(' Sau »', null, null, array('class' => 'disabled')); //Shows the next and previous links
+		echo " Trang ".$this->Paginator->counter(); // prints X of Y, where X is current page and Y is number of pages
+		?>
 	</div>
 </div>
 <div class="actions">

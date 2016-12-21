@@ -33,7 +33,9 @@
                 <button type="button" class="modify-button btn modify">
                     <?php echo $this->Html->link(__('Sửa'), array('action' => 'editProfile', $user['User']['id'])); ?>
                 </button>
-                <button type="button" class="cancel-button btn cancel"><?php echo $this->Html->link(__('Hủy'), array('action' => 'home')); ?></button>
+                <button type="button" class="cancel-button btn cancel">
+                    <?php echo $this->Html->link(__('Hủy'), array('controller'=>'users','action' => 'home')); ?>
+                </button>
             </div>
         </dl>
   

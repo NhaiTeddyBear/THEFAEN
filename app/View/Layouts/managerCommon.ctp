@@ -29,7 +29,7 @@
 
         <li><?php echo $this->Html->link(__('Trang chủ'), array('controller'=>'users', 'action'=>'home')); ?></li>
         <li><?php echo $this->Html->link(__('Thực đơn'), array('controller'=>'foods', 'action'=>'indexOfMember')); ?></li>
-        <li><?php echo $this->Html->link(__('Tin tức'), array('controller'=>'posts', 'action'=>'index')); ?></li>
+        <li><?php echo $this->Html->link(__('Tin tức'), array('controller'=>'posts', 'action'=>'userView')); ?></li>
         <li><?php echo $this->Html->link(__('Giới thiệu'), array('controller'=>'information', 'action'=>'view')); ?></li>
         <li><?php echo $this->Html->link(__('Liên hệ'), array('controller'=>'feedbacks', 'action'=>'add')); ?></li></li>
 

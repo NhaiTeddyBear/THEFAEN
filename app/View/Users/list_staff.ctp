@@ -1,12 +1,6 @@
 <div class="row">
 	<h1 class="staff-manage">Danh sách nhân viên</h1>
-	<!--thêm 1 góc nhỏ "Manager" khi người đăng nhập là Manager--!>
-<!--<div class="actions">-->
-	<!--	<h3>--><?php //echo __('Actions'); ?><!--</h3>-->
-	<!--	<ul>-->
-	<!--		<li>--><?php //echo $this->Html->link(__('List Manager'), array('action' => 'listManager')); ?><!-- </li>-->
-	<!--	</ul>-->
-	<!--</div>-->
+
 	<table cellpadding="0" cellspacing="0">
 		<tr>
 			<td colspan="9">
@@ -60,10 +54,10 @@
 		<tr>
 			<td colspan="9">
 				<?php
-				echo $this->Paginator->prev('« Previous ', null, null, array('class' => 'disabled')); //Shows the next and previous links
+				echo $this->Paginator->prev('« Trước ', null, null, array('class' => 'disabled')); //Shows the next and previous links
 				echo " | ".$this->Paginator->numbers()." | "; //Shows the page numbers
-				echo $this->Paginator->next(' Next »', null, null, array('class' => 'disabled')); //Shows the next and previous links
-				echo " Page ".$this->Paginator->counter(); // prints X of Y, where X is current page and Y is number of pages
+				echo $this->Paginator->next(' Sau »', null, null, array('class' => 'disabled')); //Shows the next and previous links
+				echo " Trang ".$this->Paginator->counter(); // prints X of Y, where X is current page and Y is number of pages
 				?>
 			</td>
 		</tr>

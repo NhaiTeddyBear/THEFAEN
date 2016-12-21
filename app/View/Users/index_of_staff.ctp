@@ -1,15 +1,3 @@
-<!--<div class="main clearfix">-->
-<!--    <aside>-->
-<!--        <ul>-->
-<!--            <li><a href="#">Quản lí</a></li>-->
-<!--            <li><a href="#">Quản lí</a></li>-->
-<!--            <li><a href="#">Quản lí</a></li>-->
-<!--            <li><a href="#">Quản lí</a></li>-->
-<!--            <li><a href="#">Quản lí</a></li>-->
-<!--            <li><a href="#">Quản lí</a></li>-->
-<!--        </ul>-->
-<!--    </aside>-->
-
 
 <div class="row">
     <ul class="manage">

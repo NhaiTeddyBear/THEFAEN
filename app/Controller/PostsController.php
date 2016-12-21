@@ -164,4 +164,9 @@ class PostsController extends AppController {
 
 		return parent::isAuthorized($user);
 	}
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('userView');
+    }
 }

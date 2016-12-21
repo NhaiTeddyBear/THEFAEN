@@ -229,5 +229,12 @@ class OrdersController extends AppController {
             return parent::isAuthorized($user);
         }
 
+        if(!isset($user)){
+            if (in_array($this->action, array('addOfMember'))) {
+                return false;
+            }
+            return $this->redirect(array('controller'=>'users','action' => 'home'));
+        }
+
     }
 }

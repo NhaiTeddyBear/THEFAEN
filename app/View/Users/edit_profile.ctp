@@ -1,6 +1,6 @@
 <div class="users form row">
     <h1 class="staff-manage">Sửa thông tin cá nhân</h1>
-    <?php echo $this->Form->create('User', array('class'=>'modify-form')); ?>
+    <?php echo $this->Form->create('User', array('class'=>'modify-form', 'enctype'=>"multipart/form-data")); ?>
         <?php
         echo $this->Form->input('id');
         echo $this->Form->input('fullname', array('label'=>'Họ và tên'));

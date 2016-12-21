@@ -33,17 +33,30 @@
 		</dd>
 		<dt><?php echo __('Vai trò'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['role']); ?>
-			&nbsp;
+			<?php
+				if($user['User']['role']== "Staff"){
+					echo "Nhân viên";
+				}
+				if ($user['User']['role']== "Manager"){
+					echo "Quản lý";
+				}
+				if ($user['User']['role']== "Member"){
+					echo "Thành viên";
+				}
+			?>
 		</dd>
 		<dt><?php echo __('Ngày khởi tạo'); ?></dt>
 		<dd>
 			<?php echo h($user['User']['created']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Ảnh đại diện'); ?></dt>
+		<dd>
+			<img src="<?php echo $this->webroot.'avatar/'.$user['User']['avatar']; ?>" width="100" height="100"/>
+		</dd>
 		<div class="actions button-group">
 			<button type="button" class="modify-button btn modify"><?php echo $this->Html->link(__('Sửa'), array('action' => 'editStaff', $user['User']['id'])); ?></button>
-			<button type="button" class="delete-button btn delete"><?php echo $this->Form->postLink(__('Xóa'), array('action' => 'deleteStaff', $user['User']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $user['User']['id']))); ?></button>
+			<button type="button" class="delete-button btn delete"><?php echo $this->Form->postLink(__('Xóa'), array('action' => 'deleteStaff', $user['User']['id']), array('confirm' => __('Bạn có muốn xóa dữ liệu # %s?', $user['User']['id']))); ?></button>
 			<button type="button" class="cancel-button btn cancel"><?php echo $this->Html->link(__('Hủy'), array('action' => 'listStaff')); ?></button>
 		</div>
 

@@ -29,10 +29,10 @@
         <tr>
             <td colspan="5">
                 <?php
-                echo $this->Paginator->prev('« Previous ', null, null, array('class' => 'disabled')); //Shows the next and previous links
+                echo $this->Paginator->prev('« Trước ', null, null, array('class' => 'disabled')); //Shows the next and previous links
                 echo " | ".$this->Paginator->numbers()." | "; //Shows the page numbers
-                echo $this->Paginator->next(' Next »', null, null, array('class' => 'disabled')); //Shows the next and previous links
-                echo " Page ".$this->Paginator->counter(); // prints X of Y, where X is current page and Y is number of pages
+                echo $this->Paginator->next(' Sau »', null, null, array('class' => 'disabled')); //Shows the next and previous links
+                echo " Trang ".$this->Paginator->counter(); // prints X of Y, where X is current page and Y is number of pages
                 ?>
             </td>
         </tr>

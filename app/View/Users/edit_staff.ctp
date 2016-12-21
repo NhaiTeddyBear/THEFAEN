@@ -9,7 +9,7 @@
 		echo $this->Form->input('dob', array('label'=>'Ngày sinh'));
 		echo $this->Form->input('phone_number', array('label'=>'Số điện thoại'));
 		echo $this->Form->input('address', array('label'=>'Địa chỉ'));
-		echo $this->Form->input('role', array('label'=> 'Vai trò', 'options' =>array('Manager'=>'Quản lí', 'Staff'=>'Nhân viên')));
+		echo $this->Form->input('role', array('label'=> 'Vai trò', 'options' =>array('Manager'=>'Quản lý', 'Staff'=>'Nhân viên')));
 	?>
 	<div class="button-group">
 		<button type="submit" class="view-button btn view submit">Lưu</button>

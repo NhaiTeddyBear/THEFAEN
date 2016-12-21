@@ -60,6 +60,26 @@ class UsersController extends AppController {
 	public function addManager(){
 		if ($this->request->is('post')) {
 			$this->User->create();
+            //add avatar
+            if (!empty($this->request->data['User']['avatar']['name'])) {
+                $file = $this->request->data['User']['avatar'];
+                //get the extension
+                $ext = substr(strtolower(strrchr($file['name'], '.')), 1);
+                //set allowed extensions
+                $arr_ext = array('jpg', 'jpeg', 'gif', 'png');
+                if (in_array($ext, $arr_ext)) {
+                    //create new parameter to find name of that food
+                    $file_name = date("Y-m-d");
+                    //create new folder to store images
+                    mkdir(WWW_ROOT . 'avatar/' . $file_name);
+                    //upload directory
+                    $upload_dir = WWW_ROOT . 'avatar/' . $file_name . '/' . $file['name'];
+                    //move an uploaded file to new location
+                    move_uploaded_file($file['tmp_name'], $upload_dir);
+                    //prepare the filename for database entry
+                    $this->request->data['User']['avatar'] = $file_name . '/' . $file['name'];
+                }
+            }
 			if ($this->User->save($this->request->data)) {
 				$this->Flash->success(__('Thêm thành công'));
 				$this->redirect(array('action' => 'listManager'));
@@ -72,6 +92,26 @@ class UsersController extends AppController {
 			throw new NotFoundException(__('Người dùng không hợp lệ'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
+            //add avatar
+            if (!empty($this->request->data['User']['avatar']['name'])) {
+                $file = $this->request->data['User']['avatar'];
+                //get the extension
+                $ext = substr(strtolower(strrchr($file['name'], '.')), 1);
+                //set allowed extensions
+                $arr_ext = array('jpg', 'jpeg', 'gif', 'png');
+                if (in_array($ext, $arr_ext)) {
+                    //create new parameter to find name of that food
+                    $file_name = date("Y-m-d");
+                    //create new folder to store images
+                    mkdir(WWW_ROOT . 'avatar/' . $file_name);
+                    //upload directory
+                    $upload_dir = WWW_ROOT . 'avatar/' . $file_name . '/' . $file['name'];
+                    //move an uploaded file to new location
+                    move_uploaded_file($file['tmp_name'], $upload_dir);
+                    //prepare the filename for database entry
+                    $this->request->data['User']['avatar'] = $file_name . '/' . $file['name'];
+                }
+            }
 			if ($this->User->save($this->request->data)) {
 				$this->Flash->success(__('Sửa thông tin thành công ^_^'));
 				$this->redirect(array('action' => 'listManager'));
@@ -169,6 +209,26 @@ class UsersController extends AppController {
 	public function addStaff() {
 		if ($this->request->is('post')) {
 			$this->User->create();
+            //add avatar
+            if (!empty($this->request->data['User']['avatar']['name'])) {
+                $file = $this->request->data['User']['avatar'];
+                //get the extension
+                $ext = substr(strtolower(strrchr($file['name'], '.')), 1);
+                //set allowed extensions
+                $arr_ext = array('jpg', 'jpeg', 'gif', 'png');
+                if (in_array($ext, $arr_ext)) {
+                    //create new parameter to find name of that food
+                    $file_name = date("Y-m-d");
+                    //create new folder to store images
+                    mkdir(WWW_ROOT . 'avatar/' . $file_name);
+                    //upload directory
+                    $upload_dir = WWW_ROOT . 'avatar/' . $file_name . '/' . $file['name'];
+                    //move an uploaded file to new location
+                    move_uploaded_file($file['tmp_name'], $upload_dir);
+                    //prepare the filename for database entry
+                    $this->request->data['User']['avatar'] = $file_name . '/' . $file['name'];
+                }
+            }
 			if ($this->User->save($this->request->data)) {
 				$this->Flash->set('Thêm nhân viên thành công', array('key'=>'addStaffSuccess'));
 				$this->redirect(array('action' => 'listStaff'));
@@ -190,6 +250,26 @@ class UsersController extends AppController {
 			throw new NotFoundException(__('Người dùng không hợp lệ'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
+            //add avatar
+            if (!empty($this->request->data['User']['avatar']['name'])) {
+                $file = $this->request->data['User']['avatar'];
+                //get the extension
+                $ext = substr(strtolower(strrchr($file['name'], '.')), 1);
+                //set allowed extensions
+                $arr_ext = array('jpg', 'jpeg', 'gif', 'png');
+                if (in_array($ext, $arr_ext)) {
+                    //create new parameter to find name of that food
+                    $file_name = date("Y-m-d");
+                    //create new folder to store images
+                    mkdir(WWW_ROOT . 'avatar/' . $file_name);
+                    //upload directory
+                    $upload_dir = WWW_ROOT . 'avatar/' . $file_name . '/' . $file['name'];
+                    //move an uploaded file to new location
+                    move_uploaded_file($file['tmp_name'], $upload_dir);
+                    //prepare the filename for database entry
+                    $this->request->data['User']['avatar'] = $file_name . '/' . $file['name'];
+                }
+            }
 			if ($this->User->save($this->request->data)) {
 				$this->Flash->set('Sửa thông tin nhân viên thành công', array('key'=>'editStaffSuccess'));
 				$this->redirect(array('action' => 'listStaff'));
@@ -275,6 +355,26 @@ class UsersController extends AppController {
 	public function addMember() {
 		if ($this->request->is('post')) {
 			$this->User->create();
+            //add avatar
+            if (!empty($this->request->data['User']['avatar']['name'])) {
+                $file = $this->request->data['User']['avatar'];
+                //get the extension
+                $ext = substr(strtolower(strrchr($file['name'], '.')), 1);
+                //set allowed extensions
+                $arr_ext = array('jpg', 'jpeg', 'gif', 'png');
+                if (in_array($ext, $arr_ext)) {
+                    //create new parameter to find name of that food
+                    $file_name = date("Y-m-d");
+                    //create new folder to store images
+                    mkdir(WWW_ROOT . 'avatar/' . $file_name);
+                    //upload directory
+                    $upload_dir = WWW_ROOT . 'avatar/' . $file_name . '/' . $file['name'];
+                    //move an uploaded file to new location
+                    move_uploaded_file($file['tmp_name'], $upload_dir);
+                    //prepare the filename for database entry
+                    $this->request->data['User']['avatar'] = $file_name . '/' . $file['name'];
+                }
+            }
 			if ($this->User->save($this->request->data)) {
 				$this->Flash->set('Thêm thành viên thành công', array('key'=>'addMemberSuccess'));
 				$this->redirect(array('action' => 'listMember'));
@@ -296,6 +396,26 @@ class UsersController extends AppController {
 			throw new NotFoundException(__('Người dùng không hợp lệ'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
+            //add avatar
+            if (!empty($this->request->data['User']['avatar']['name'])) {
+                $file = $this->request->data['User']['avatar'];
+                //get the extension
+                $ext = substr(strtolower(strrchr($file['name'], '.')), 1);
+                //set allowed extensions
+                $arr_ext = array('jpg', 'jpeg', 'gif', 'png');
+                if (in_array($ext, $arr_ext)) {
+                    //create new parameter to find name of that food
+                    $file_name = date("Y-m-d");
+                    //create new folder to store images
+                    mkdir(WWW_ROOT . 'avatar/' . $file_name);
+                    //upload directory
+                    $upload_dir = WWW_ROOT . 'avatar/' . $file_name . '/' . $file['name'];
+                    //move an uploaded file to new location
+                    move_uploaded_file($file['tmp_name'], $upload_dir);
+                    //prepare the filename for database entry
+                    $this->request->data['User']['avatar'] = $file_name . '/' . $file['name'];
+                }
+            }
 			if ($this->User->save($this->request->data)) {
 				$this->Flash->set('Sửa thông tin thành viên thành công', array('key'=>'editMemberSuccess'));
 				$this->redirect(array('action' => 'listMember'));
@@ -367,11 +487,7 @@ class UsersController extends AppController {
 
 	}
 
-//xin phép cô Ngân cho cô Nhài quẩy thêm cái này vào đây để hiển thị trang index của member nhé
-// trong quá trình test thì dùng cái này thử xem sao =))
-	public function indexOfMember(){
 
-    }
 
 	/**
 	 * view personal profile
@@ -399,9 +515,9 @@ class UsersController extends AppController {
                 //create new parameter to find name of that food
                 $file_name = date("Y-m-d");
                 //create new folder to store images
-                if(!$file_name){
-                    mkdir(WWW_ROOT. 'avatar/' . $file_name) ;
-                }
+
+                mkdir(WWW_ROOT. 'avatar/' . $file_name) ;
+
                 //upload directory
                 $upload_dir = WWW_ROOT . 'avatar/'. $file_name. '/' .$file['name'];
                 //move an uploaded file to new location
@@ -427,7 +543,6 @@ class UsersController extends AppController {
     public function register(){
         if ($this->request->is('post')) {
             $this->User->create();
-
             //set role
             $this->request->data['User']['role'] = "Member";
 
