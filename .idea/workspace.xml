@@ -2,31 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="519fffdd-d8ac-40d3-ae6e-3b59d3beeefc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/View/Users/index_of_staff.ctp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/View/Posts/view.ctp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_information" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/AppController.php" afterPath="$PROJECT_DIR$/app/Controller/AppController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/CalendarsController.php" afterPath="$PROJECT_DIR$/app/Controller/CalendarsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/CategoriesController.php" afterPath="$PROJECT_DIR$/app/Controller/CategoriesController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/CommentsController.php" afterPath="$PROJECT_DIR$/app/Controller/CommentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/EventsController.php" afterPath="$PROJECT_DIR$/app/Controller/EventsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/FeedbacksController.php" afterPath="$PROJECT_DIR$/app/Controller/FeedbacksController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/FoodsController.php" afterPath="$PROJECT_DIR$/app/Controller/FoodsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/InformationController.php" afterPath="$PROJECT_DIR$/app/Controller/InformationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/IngredientsController.php" afterPath="$PROJECT_DIR$/app/Controller/IngredientsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/MoniesController.php" afterPath="$PROJECT_DIR$/app/Controller/MoniesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/OrdersController.php" afterPath="$PROJECT_DIR$/app/Controller/OrdersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/PostsController.php" afterPath="$PROJECT_DIR$/app/Controller/PostsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/PurchasesController.php" afterPath="$PROJECT_DIR$/app/Controller/PurchasesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/SchedulesController.php" afterPath="$PROJECT_DIR$/app/Controller/SchedulesController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/UsersController.php" afterPath="$PROJECT_DIR$/app/Controller/UsersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Food.php" afterPath="$PROJECT_DIR$/app/Model/Food.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Post.php" afterPath="$PROJECT_DIR$/app/Model/Post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/User.php" afterPath="$PROJECT_DIR$/app/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Foods/search.ctp" afterPath="$PROJECT_DIR$/app/View/Foods/search.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/managerCommon.ctp" afterPath="$PROJECT_DIR$/app/View/Layouts/managerCommon.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Comments/add.ctp" afterPath="$PROJECT_DIR$/app/View/Comments/add.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Orders/add_of_member.ctp" afterPath="$PROJECT_DIR$/app/View/Orders/add_of_member.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Posts/index.ctp" afterPath="$PROJECT_DIR$/app/View/Posts/index.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Posts/user_view.ctp" afterPath="$PROJECT_DIR$/app/View/Posts/user_view.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Users/home.ctp" afterPath="$PROJECT_DIR$/app/View/Users/home.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_categories" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_categories" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_comments" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_comments" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_foods" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_foods" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_list" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_list" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_posts" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_posts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_users" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_faen_users" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_dev_vi" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_dev_vi" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_vi" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_vi" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_default_vi" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_default_vi" />
@@ -34,7 +31,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_method_cache" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_method_cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/logs/error.log" afterPath="$PROJECT_DIR$/app/tmp/logs/error.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/css/style.css" afterPath="$PROJECT_DIR$/app/webroot/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/faen.sql" afterPath="$PROJECT_DIR$/faen.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Cake/View/Helper/PaginatorHelper.php" afterPath="$PROJECT_DIR$/lib/Cake/View/Helper/PaginatorHelper.php" />
     </list>
     <ignored path="thefaen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,11 +60,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PostsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.ctp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/View/Posts/index.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1220">
+              <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="180" column="17" selection-start-line="180" selection-start-column="17" selection-end-line="180" selection-end-column="17" />
+            <state relative-caret-position="383">
+              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -81,11 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/View/Users/list_member.ctp" />
-        <option value="$PROJECT_DIR$/app/View/Schedules/index_of_staff.ctp" />
-        <option value="$PROJECT_DIR$/app/View/Schedules/index_of_manager1.ctp" />
-        <option value="$PROJECT_DIR$/app/View/Purchases/index_of_member.ctp" />
-        <option value="$PROJECT_DIR$/app/View/Purchases/index_of_staff.ctp" />
         <option value="$PROJECT_DIR$/app/View/Orders/index_of_member.ctp" />
         <option value="$PROJECT_DIR$/app/View/Orders/index_of_staff.ctp" />
         <option value="$PROJECT_DIR$/app/View/Monies/index_of_manager1.ctp" />
@@ -103,35 +105,40 @@
         <option value="$PROJECT_DIR$/app/View/Users/view_profile.ctp" />
         <option value="$PROJECT_DIR$/app/View/Posts/add.ctp" />
         <option value="$PROJECT_DIR$/app/View/Posts/edit.ctp" />
-        <option value="$PROJECT_DIR$/app/View/Posts/view.ctp" />
         <option value="$PROJECT_DIR$/app/View/Users/index_of_manager.ctp" />
         <option value="$PROJECT_DIR$/app/View/Posts/index_of_manager.ctp" />
-        <option value="$PROJECT_DIR$/app/View/Posts/index.ctp" />
         <option value="$PROJECT_DIR$/app/View/Layouts/managerLayout.ctp" />
-        <option value="$PROJECT_DIR$/app/View/Posts/user_view.ctp" />
-        <option value="$PROJECT_DIR$/app/View/Users/home.ctp" />
         <option value="$PROJECT_DIR$/app/View/Foods/view.ctp" />
         <option value="$PROJECT_DIR$/app/Model/User.php" />
         <option value="$PROJECT_DIR$/app/Model/Post.php" />
         <option value="$PROJECT_DIR$/app/View/Foods/search.ctp" />
-        <option value="$PROJECT_DIR$/app/Model/Food.php" />
         <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
         <option value="$PROJECT_DIR$/app/View/Layouts/managerCommon.ctp" />
-        <option value="$PROJECT_DIR$/app/webroot/css/style.css" />
         <option value="$PROJECT_DIR$/app/Controller/CalendarsController.php" />
-        <option value="$PROJECT_DIR$/app/Controller/CategoriesController.php" />
-        <option value="$PROJECT_DIR$/app/Controller/CommentsController.php" />
         <option value="$PROJECT_DIR$/app/Controller/EventsController.php" />
-        <option value="$PROJECT_DIR$/app/Controller/FeedbacksController.php" />
-        <option value="$PROJECT_DIR$/app/Controller/FoodsController.php" />
-        <option value="$PROJECT_DIR$/app/Controller/InformationController.php" />
         <option value="$PROJECT_DIR$/app/Controller/IngredientsController.php" />
         <option value="$PROJECT_DIR$/app/Controller/MoniesController.php" />
         <option value="$PROJECT_DIR$/app/Controller/OrdersController.php" />
         <option value="$PROJECT_DIR$/app/Controller/PurchasesController.php" />
-        <option value="$PROJECT_DIR$/app/Controller/UsersController.php" />
-        <option value="$PROJECT_DIR$/app/Controller/PostsController.php" />
         <option value="$PROJECT_DIR$/app/Controller/SchedulesController.php" />
+        <option value="$PROJECT_DIR$/app/webroot/css/style.css" />
+        <option value="$USER_HOME$/Downloads/TheFaen-7/TheFaen/tin-tuc-single.html" />
+        <option value="$PROJECT_DIR$/app/View/Posts/view.ctp" />
+        <option value="$PROJECT_DIR$/app/Controller/FoodsController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/InformationController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/FeedbacksController.php" />
+        <option value="$PROJECT_DIR$/app/View/Users/home.ctp" />
+        <option value="$PROJECT_DIR$/app/Model/Food.php" />
+        <option value="$PROJECT_DIR$/app/View/Orders/add_of_member.ctp" />
+        <option value="$PROJECT_DIR$/app/View/Posts/new_single.ctp" />
+        <option value="$PROJECT_DIR$/app/Controller/CommentsController.php" />
+        <option value="$PROJECT_DIR$/app/View/Posts/user_view.ctp" />
+        <option value="$PROJECT_DIR$/app/View/Comments/new_single.ctp" />
+        <option value="$PROJECT_DIR$/app/Controller/CategoriesController.php" />
+        <option value="$PROJECT_DIR$/lib/Cake/View/Helper/PaginatorHelper.php" />
+        <option value="$PROJECT_DIR$/app/Controller/PostsController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/View/Posts/index.ctp" />
       </list>
     </option>
   </component>
@@ -148,7 +155,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -195,6 +202,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,10 +292,6 @@
               <option name="myItemId" value="View" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Users" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -306,22 +310,8 @@
               <option name="myItemId" value="View" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thefaen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thefaen" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
+              <option name="myItemId" value="Posts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,7 +336,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,6 +346,9 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\thefaen\app\View\Comments" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\thefaen\app\View\Schedules" />
     </key>
@@ -461,23 +453,24 @@
       <workItem from="1482241231736" duration="6359000" />
       <workItem from="1482300895789" duration="8354000" />
       <workItem from="1482315481395" duration="23504000" />
-      <workItem from="1482369782847" duration="6507000" />
+      <workItem from="1482369782847" duration="24477000" />
+      <workItem from="1482415613380" duration="397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203114000" />
+    <option name="totallyTimeSpent" value="221481000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22685888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22617246" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2647504" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26403642" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -533,35 +526,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/View/Users/index_of_staff.ctp" />
-    <entry file="file://$PROJECT_DIR$/app/View/Users/list_staff.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Users/login.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Users/register.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1066">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Users/view_manager.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-690">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Users/view_staff.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="860">
@@ -608,6 +572,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="33" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -615,25 +580,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="37" selection-start-line="3" selection-start-column="12" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Posts/view.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Users/index_of_manager.ctp" />
     <entry file="file://$PROJECT_DIR$/app/View/Posts/index_of_manager.ctp" />
-    <entry file="file://$PROJECT_DIR$/app/View/Posts/read.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Foods/index_of_manager1.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
@@ -641,29 +593,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Posts/index.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Layouts/staff.ctp" />
     <entry file="file://$PROJECT_DIR$/app/View/Layouts/managerLayout.ctp" />
-    <entry file="file://$PROJECT_DIR$/app/View/Posts/user_view.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Users/home.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Users/view_profile.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
@@ -675,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="21" column="29" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,13 +613,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Foods/index_of_member.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="111" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="111" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -697,23 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="28" column="10" selection-start-line="26" selection-start-column="8" selection-end-line="28" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Foods/search.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Food.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
           <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,7 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="940">
           <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -749,25 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="783" column="35" selection-start-line="783" selection-start-column="35" selection-end-line="783" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Layouts/managerCommon.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-          <folding>
-            <marker date="1482378395636" expanded="true" signature="5008:5048" ph="..." />
-            <marker date="1482378395636" expanded="true" signature="5008:5057" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/CalendarsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-840">
@@ -776,42 +662,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/CategoriesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-666">
-          <caret line="98" column="66" selection-start-line="98" selection-start-column="66" selection-end-line="98" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/CommentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-666">
-          <caret line="94" column="66" selection-start-line="94" selection-start-column="66" selection-end-line="94" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-686">
           <caret line="69" column="66" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/FeedbacksController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-666">
-          <caret line="65" column="66" selection-start-line="65" selection-start-column="66" selection-end-line="65" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/InformationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-286">
-          <caret line="44" column="66" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -840,26 +694,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/OrdersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="194" column="32" selection-start-line="193" selection-start-column="8" selection-end-line="194" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/PurchasesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1240">
           <caret line="151" column="66" selection-start-line="151" selection-start-column="66" selection-end-line="151" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1266">
-          <caret line="586" column="66" selection-start-line="586" selection-start-column="66" selection-end-line="586" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -872,18 +710,174 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="1501" column="10" selection-start-line="1501" selection-start-column="10" selection-end-line="1501" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/TheFaen-7/TheFaen/tin-tuc-single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Foods/index_of_member.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="111" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/InformationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/FeedbacksController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Foods/search.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Posts/view_detail.ctp" />
+    <entry file="file://$PROJECT_DIR$/app/Model/Food.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Users/home.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Comments/add.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Orders/add_of_member.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="7" selection-start-line="18" selection-start-column="4" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/OrdersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3120">
+          <caret line="206" column="55" selection-start-line="206" selection-start-column="55" selection-end-line="206" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Posts/read.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Cake/View/Helper/PaginatorHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="643" column="41" selection-start-line="643" selection-start-column="41" selection-end-line="643" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/CategoriesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="152" column="53" selection-start-line="152" selection-start-column="53" selection-end-line="152" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/managerCommon.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+          <folding>
+            <marker date="1482378395636" expanded="true" signature="5008:5048" ph="..." />
+            <marker date="1482378395636" expanded="true" signature="5008:5057" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8086">
+          <caret line="249" column="38" selection-start-line="249" selection-start-column="38" selection-end-line="249" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/FoodsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="187" column="5" selection-start-line="184" selection-start-column="4" selection-end-line="187" selection-end-column="5" />
+        <state relative-caret-position="1960">
+          <caret line="98" column="13" selection-start-line="79" selection-start-column="12" selection-end-line="98" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Comments/add.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/CommentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3200">
+          <caret line="160" column="31" selection-start-line="160" selection-start-column="31" selection-end-line="160" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Posts/user_view.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="180" column="17" selection-start-line="180" selection-start-column="17" selection-end-line="180" selection-end-column="17" />
+        <state relative-caret-position="383">
+          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Posts/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1220">
+          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
           <folding />
         </state>
       </provider>

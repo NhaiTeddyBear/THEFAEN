@@ -244,7 +244,9 @@ class UsersController extends AppController {
                     //create new parameter to find name of that food
                     $file_name = date("Y-m-d");
                     //create new folder to store images
-                    mkdir(WWW_ROOT . 'avatar/' . $file_name);
+                    if(!$file_name) {
+                        mkdir(WWW_ROOT . 'avatar/' . $file_name);
+                    }
                     //upload directory
                     $upload_dir = WWW_ROOT . 'avatar/' . $file_name . '/' . $file['name'];
                     //move an uploaded file to new location
@@ -521,8 +523,10 @@ class UsersController extends AppController {
 	 */
 	public function home(){
 	    //show Avatar
-        $user_avatar = $this->User->findById($this->Auth->user('id'));
-        $this->set('user_avatar', $user_avatar['User']['avatar']);
+        if($this->Auth->user()) {
+            $user_avatar = $this->User->findById($this->Auth->user('id'));
+            $this->set('user_avatar', $user_avatar['User']['avatar']);
+        }
 
         $user = $this->Auth->user();
 	    $this->setHeader($user);

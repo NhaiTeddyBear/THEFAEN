@@ -641,7 +641,7 @@ class PaginatorHelper extends AppHelper {
 		$options += array(
 			'model' => $this->defaultModel(),
 			'format' => 'pages',
-			'separator' => __d('cake', ' của ')
+			'separator' => __d('cake', '/')
 		);
 
 		$paging = $this->params($options['model']);

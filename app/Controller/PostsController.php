@@ -40,21 +40,23 @@ class PostsController extends AppController {
  * @param string $id
  * @return void
  */
-	public function view($id = null) {
+	public function newSingle($id){
         //show Avatar
-        $this->loadModel('User');
-        $user_avatar = $this->User->findById($this->Auth->user('id'));
-        $this->set('user_avatar', $user_avatar['User']['avatar']);
+        if($this->Auth->user()) {
+            $this->loadModel('User');
+            $user_avatar = $this->User->findById($this->Auth->user('id'));
+            $this->set('user_avatar', $user_avatar['User']['avatar']);
+        }
 
         $user = $this->Auth->user();
         $this->setHeader($user);
 
-		if (!$this->Post->exists($id)) {
-			throw new NotFoundException(__('Invalid post'));
-		}
-		$options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
-		$this->set('post', $this->Post->find('first', $options));
-	}
+        if (!$this->Post->exists($id)) {
+            throw new NotFoundException(__('Invalid post'));
+        }
+        $options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
+        $this->set('post', $this->Post->find('first', $options));
+    }
 
 /**
  * add method
@@ -72,6 +74,29 @@ class PostsController extends AppController {
 
 		if ($this->request->is('post')) {
 			$this->Post->create();
+            //Check if image has been uploaded
+            if (!empty($this->request->data['Post']['image']['name'])) {
+                $file = $this->request->data['Post']['image'];
+                //get the extension
+                $ext = substr(strtolower(strrchr($file['name'], '.')), 1);
+                //set allowed extensions
+                $arr_ext = array('jpg', 'jpeg', 'gif','png');
+                if (in_array($ext, $arr_ext)) {
+                    //create new parameter to find name of that food
+                    $file_name = date("d-m-Y");
+                    //create new folder to store images
+                    if($file_name){
+                        mkdir(WWW_ROOT . 'post/' . $file_name);
+                    }
+                    //upload directory
+                    $upload_dir = WWW_ROOT . 'post/'. $file_name. '/' .$file['name'];
+                    //move an uploaded file to new location
+                    move_uploaded_file($file['tmp_name'], $upload_dir);
+                    //prepare the filename for database entry
+                    $this->request->data['Post']['image'] = $file_name. '/' . $file['name'];
+                }
+            }
+
 			if ($this->Post->save($this->request->data)) {
 				$this->Flash->success(__('The post has been saved.'));
 				return $this->redirect(array('action' => 'index'));
@@ -142,16 +167,18 @@ class PostsController extends AppController {
 
 
 	public function userView() {
-        //show Avatar
-        $this->loadModel('User');
-        $user_avatar = $this->User->findById($this->Auth->user('id'));
-        $this->set('user_avatar', $user_avatar['User']['avatar']);
+	    //show Avatar
+	    if($this->Auth->user()) {
+            $this->loadModel('User');
+            $user_avatar = $this->User->findById($this->Auth->user('id'));
+            $this->set('user_avatar', $user_avatar['User']['avatar']);
+        }
 
         $user = $this->Auth->user();
         $this->setHeader($user);
 
 		$this->paginate = array(
-			'limit' => 5,
+			'limit' => 6,
 			'order' => array(
 				'id' => 'desc'
 			)
@@ -160,13 +187,13 @@ class PostsController extends AppController {
 	}
 
 	public function read($id = null){
-        //show Avatar
-        $this->loadModel('User');
-        $user_avatar = $this->User->findById($this->Auth->user('id'));
-        $this->set('user_avatar', $user_avatar['User']['avatar']);
-
-        $user = $this->Auth->user();
-        $this->setHeader($user);
+//        //show Avatar
+//        $this->loadModel('User');
+//        $user_avatar = $this->User->findById($this->Auth->user('id'));
+//        $this->set('user_avatar', $user_avatar['User']['avatar']);
+//
+//        $user = $this->Auth->user();
+//        $this->setHeader($user);
 
 		if (!$this->Post->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));

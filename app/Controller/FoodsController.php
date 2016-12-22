@@ -27,9 +27,11 @@ class FoodsController extends AppController{
 
     public function indexOfMember(){
         //show Avatar
-        $this->loadModel('User');
-        $user_avatar = $this->User->findById($this->Auth->user('id'));
-        $this->set('user_avatar', $user_avatar['User']['avatar']);
+        if($this->Auth->user()) {
+            $this->loadModel('User');
+            $user_avatar = $this->User->findById($this->Auth->user('id'));
+            $this->set('user_avatar', $user_avatar['User']['avatar']);
+        }
 
         $user = $this->Auth->user();
         $this->setHeader($user);

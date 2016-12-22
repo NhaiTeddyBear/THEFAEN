@@ -7,7 +7,7 @@
 
 <!--Search-->
 <div class="row">
-<h1 class="staff-manage">Search</h1>
+<h1 class="staff-manage"></h1>
 <form action="/thefaen/foods/search" class="modify-form" id="FoodSearchForm" method="post" accept-charset="utf-8">
     <div style="display:none;">
         <input type="hidden" name="_method" value="POST"/>

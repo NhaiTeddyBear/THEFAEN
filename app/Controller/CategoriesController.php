@@ -149,5 +149,12 @@ class CategoriesController extends AppController {
 			}
 			return parent::isAuthorized($user);
 		}
+
+        if (isset($user) && $user['role'] == 'Manager') {
+            if (in_array($this->action, array('add', 'view', 'index', 'edit', 'delete'))) {
+                return true;
+            }
+            return parent::isAuthorized($user);
+        }
 	}
 }

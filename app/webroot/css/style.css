@@ -661,21 +661,6 @@ hr.style18:before {
     padding-top: 20px;
 }
 
-.col-md-6 {
-    width: 50%;
-    font-family: 'Source Sans Pro', sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    float: left;
-}
-
-.col-md-6 img {
-    max-width: 100%;
-    float: left;
-    width: 45%;
-    margin-left: 10px;
-}
-
 .col-md-6 span {
     font-weight: 400;
     color: grey;
@@ -1473,7 +1458,7 @@ hr.style18:before {
 .col-md-6 {
     width: 50%;
     font-family: 'Source Sans Pro', sans-serif;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     margin-bottom: 20px;
     float: left;
 }
@@ -1495,7 +1480,6 @@ hr.style18:before {
 .news-dt {
     float: right;
     width: 50%;
-
 }
 
 .news-dt b {

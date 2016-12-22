@@ -1,24 +1,56 @@
-<div class="comments form">
-<?php echo $this->Form->create('Comment'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Comment'); ?></legend>
-	<?php
-		echo $this->Form->input('user_id');
-		echo $this->Form->input('post_id');
-		echo $this->Form->input('detail');
-		echo $this->Form->input('date_created');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<div class="tin-tuc-single">
+    <h2 class="soba"><?php echo $post['Post']['title'];?></h2>
+    <img class="mi-soba" src="/img/mi-nhat-ban.jpg" alt="Mi Nhat Ban">
+    <p><?php  echo $post['Post']['body']?></p>
+    <h3>Bình luận</h3>
 
-		<li><?php echo $this->Html->link(__('List Comments'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Posts'), array('controller' => 'posts', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Post'), array('controller' => 'posts', 'action' => 'add')); ?> </li>
-	</ul>
+    <?php foreach ($comments as $comment) {
+        echo $comment['Comment']['detail'];
+    }
+    echo $this->element('newComment', array("post_id" => $post['Post']['id']));
+    ?>
+
+    <?php
+        echo $this->Form->create('Comment',array(
+            'controller' => 'comments',
+//            'action' => 'add',
+            'url' => array($post_id),
+            'class' => 'modify-form'
+        )); ?>
+
+    <legend style="text-transform: uppercase;">Bình luận <span style="color:red">(*)</span></legend>
+    <?php if(isset($_SESSION['Auth']['User'])) {?>
+    <span style="color:red; font-size: 0.7em; text-align: center;">
+        <p>(Chỉ thành viên được quyền sử dụng chức năng này.
+            Bạn vui lòng đăng ký tài khoản tại
+            <?php $this->Html->link('đây )', array('controller'=>'users', 'action'=>'register'));?>
+            <?php } ?>
+     </p></span>
+
+    <?php
+        echo $this->Form->input('detail', array(
+            'label' => 'Nội dung',
+            'id' => 'detail',
+            'required'=>'required',
+            'type'=>'textarea',
+        ));
+    ?>
+    <div class="button-group">
+        <?php
+        echo $this->Form->button('Gửi bình luận', array(
+            'class' => 'modify-button btn modify', array(
+                'controller' => 'comments',
+                'action' => 'add',
+            ),
+        ));
+        ?>
+
+        <button type="button" class="cancel-button btn cancel">
+            <?php echo $this->Html->link(
+                'Hủy',
+                array('controller' => 'posts', 'action' => 'newSingle')
+            ); ?>
+        </button>
+    </div>
 </div>
+

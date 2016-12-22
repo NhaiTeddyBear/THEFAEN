@@ -37,6 +37,5 @@
                 array('controller' => 'users', 'action' => 'home')
             ); ?>
         </button>
-
     </div>
 </div>

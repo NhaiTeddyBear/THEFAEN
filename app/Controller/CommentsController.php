@@ -59,7 +59,7 @@ class CommentsController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function add($post_id = null) {
         //show Avatar
         $this->loadModel('User');
         $user_avatar = $this->User->findById($this->Auth->user('id'));
@@ -67,8 +67,17 @@ class CommentsController extends AppController {
 
         $user = $this->Auth->user();
         $this->setHeader($user);
+
 		if ($this->request->is('post')) {
 			$this->Comment->create();
+
+            //set post_id
+            $this->Comment->set(array('post_id'=>$post_id));
+
+            //setup name of user
+            $user_id = $this->Auth->user('id');
+            $this->request->data['Comment']['user_id'] = $user_id;
+
 			if ($this->Comment->save($this->request->data)) {
 				$this->Flash->success(__('The comment has been saved.'));
 				return $this->redirect(array('action' => 'index'));
@@ -146,4 +155,9 @@ class CommentsController extends AppController {
 			return parent::isAuthorized($user);
 		}
 	}
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('add');
+    }
 }

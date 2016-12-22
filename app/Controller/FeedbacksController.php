@@ -61,9 +61,11 @@ class FeedbacksController extends AppController {
  */
 	public function add() {
         //show Avatar
-        $this->loadModel('User');
-        $user_avatar = $this->User->findById($this->Auth->user('id'));
-        $this->set('user_avatar', $user_avatar['User']['avatar']);
+        if($this->Auth->user()) {
+            $this->loadModel('User');
+            $user_avatar = $this->User->findById($this->Auth->user('id'));
+            $this->set('user_avatar', $user_avatar['User']['avatar']);
+        }
 
         $user = $this->Auth->user();
         $this->setHeader($user);
