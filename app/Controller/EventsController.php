@@ -6,6 +6,11 @@ class EventsController extends AppController{
 
     // for view all products
    public function index() {
+       //show Avatar
+       $this->loadModel('User');
+       $user_avatar = $this->User->findById($this->Auth->user('id'));
+       $this->set('user_avatar', $user_avatar['User']['avatar']);
+
        $user = $this->Auth->user();
        $this->setHeader($user);
         $this->paginate = array(
@@ -19,6 +24,11 @@ class EventsController extends AppController{
     //when people click on name of any products, this will show them all information
     //of that product
     public function view($id=null){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if(!$id){
@@ -34,6 +44,11 @@ class EventsController extends AppController{
      * function add to add more Foods
      */
     public function add() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if ($this->request->is('post')) {
@@ -49,6 +64,11 @@ class EventsController extends AppController{
      * function edit
      */
     public function edit($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if (!$id) {

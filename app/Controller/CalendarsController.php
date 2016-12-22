@@ -21,6 +21,11 @@ class CalendarsController extends AppController {
  * @return void
  */
 	public function index() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		$this->Calendar->recursive = 0;
@@ -35,6 +40,11 @@ class CalendarsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$this->Calendar->exists($id)) {
@@ -50,6 +60,11 @@ class CalendarsController extends AppController {
  * @return void
  */
 	public function add() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if ($this->request->is('post')) {
@@ -73,6 +88,11 @@ class CalendarsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$this->Calendar->exists($id)) {

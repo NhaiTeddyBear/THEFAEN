@@ -21,13 +21,12 @@
             <li><?php echo $this->Html->link(__('Liên hệ'), array('controller'=>'feedbacks', 'action'=>'add')); ?></li>
 <!--        </li>-->
 
-        <?php  if(isset($manager)) { ?>
+        <!-- for staff when they login-->
+        <?php  if(isset($staff)) { ?>
         <li class="dropdown">
             <a href="#" class="dropbtn">Quản lý</a>
             <div class="dropdown-content">
-                <?php echo $this->Html->link(__('Quản lý nhân viên'), array('controller'=>'users', 'action'=>'listStaff')); ?>
-                <?php echo $this->Html->link(__('Quản lý đồ ăn, đồ uống'), array('controller'=>'foods', 'action'=>'indexOfManager1')); ?>
-                <?php echo $this->Html->link(__('Quản lý chương trình khuyến mại'), array('controller'=>'events', 'action'=>'index')); ?>
+                <?php echo $this->Html->link(__('Quản lý thông tin cửa hàng'), array('controller'=>'information', 'action'=>'view')); ?>
                 <?php echo $this->Html->link(__('Quản lý thành viên'), array('controller'=>'users', 'action'=>'listMember')); ?>
                 <?php echo $this->Html->link(__('Quản lý giao dịch'), array('controller'=>'purchases', 'action'=>'indexOfStaff')); ?>
                 <?php echo $this->Html->link(__('Quản lý bài viết'), array('controller'=>'posts', 'action'=>'index')); ?>
@@ -39,11 +38,29 @@
         </li>
         <?php } ?>
 
+        <!-- for manager when they login-->
+        <?php  if(isset($manager)) { ?>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Quản lý</a>
+                <div class="dropdown-content">
+                    <?php echo $this->Html->link(__('Quản lý nhân viên'), array('controller'=>'users', 'action'=>'listStaff')); ?>
+                    <?php echo $this->Html->link(__('Quản lý đồ ăn, đồ uống'), array('controller'=>'foods', 'action'=>'indexOfManager1')); ?>
+                    <?php echo $this->Html->link(__('Quản lý chương trình khuyến mại'), array('controller'=>'events', 'action'=>'index')); ?>
+                    <?php echo $this->Html->link(__('Quản lý giao dịch'), array('controller'=>'purchases', 'action'=>'indexOfStaff')); ?>
+                    <?php echo $this->Html->link(__('Quản lý bài viết'), array('controller'=>'posts', 'action'=>'index')); ?>
+                    <?php echo $this->Html->link(__('Quản lý nguyên liệu'), array('controller'=>'ingredients', 'action'=>'index')); ?>
+                    <?php echo $this->Html->link(__('Quản lý đặt hàng'), array('controller'=>'orders', 'action'=>'index')); ?>
+                    <?php echo $this->Html->link(__('Quản lý lịch làm việc'), array('controller'=>'schedules', 'action'=>'indexOfManager1')); ?>
+                    <?php echo $this->Html->link(__('Quản lý danh mục món ăn'), array('controller'=>'categories', 'action'=>'index')); ?>
+                </div>
+            </li>
+        <?php } ?>
+
 
         <div class="dropdown">
         <?php  if(isset($_SESSION['Auth']['User'])) { ?>
             <?php
-                echo $this->Html->image('/img/avatar.jpg', array(
+               echo $this->Html->image("/avatar/$user_avatar", array(
                     'alt' => 'user-avatar',
                     'class' => 'avatar',
                     'url' => array(

@@ -21,6 +21,14 @@ class PostsController extends AppController {
  * @return void
  */
 	public function index() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
+        $user = $this->Auth->user();
+        $this->setHeader($user);
+
 		$this->Post->recursive = 0;
 		$this->set('posts', $this->Paginator->paginate());
 	}
@@ -33,6 +41,14 @@ class PostsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
+        $user = $this->Auth->user();
+        $this->setHeader($user);
+
 		if (!$this->Post->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}
@@ -46,6 +62,14 @@ class PostsController extends AppController {
  * @return void
  */
 	public function add() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
+        $user = $this->Auth->user();
+        $this->setHeader($user);
+
 		if ($this->request->is('post')) {
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
@@ -68,6 +92,14 @@ class PostsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
+        $user = $this->Auth->user();
+        $this->setHeader($user);
+
 		if (!$this->Post->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}
@@ -110,6 +142,14 @@ class PostsController extends AppController {
 
 
 	public function userView() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
+        $user = $this->Auth->user();
+        $this->setHeader($user);
+
 		$this->paginate = array(
 			'limit' => 5,
 			'order' => array(
@@ -120,6 +160,14 @@ class PostsController extends AppController {
 	}
 
 	public function read($id = null){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
+        $user = $this->Auth->user();
+        $this->setHeader($user);
+
 		if (!$this->Post->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}
@@ -173,4 +221,9 @@ class PostsController extends AppController {
 
 		return parent::isAuthorized($user);
 	}
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('userView');
+    }
 }

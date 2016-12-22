@@ -21,6 +21,11 @@ class OrdersController extends AppController {
      * @return void
      */
     public function indexOfStaff() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 
@@ -36,6 +41,11 @@ class OrdersController extends AppController {
 
 
     public function indexOfMember() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         $this->Order->recursive = 0;
@@ -59,6 +69,11 @@ class OrdersController extends AppController {
      * @return void
      */
     public function view($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if (!$this->Order->exists($id)) {
@@ -74,6 +89,11 @@ class OrdersController extends AppController {
      * @return void
      */
     public function addOfStaff() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if ($this->request->is('post')) {
@@ -101,8 +121,6 @@ class OrdersController extends AppController {
 
             //get user_id
             $this->request->data['Order']['user_id'] = $this->Auth->user('id');
-//
-//            var_dump($this->request->data); die;
 
             //save data
             if ($this->Order->save($this->request->data)) {
@@ -118,6 +136,11 @@ class OrdersController extends AppController {
     }
 
     public function addOfMember($food_id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if ($this->request->is('post')) {
@@ -163,6 +186,11 @@ class OrdersController extends AppController {
      * @return void
      */
     public function edit($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if (!$this->Order->exists($id)) {

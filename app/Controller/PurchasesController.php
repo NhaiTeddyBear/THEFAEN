@@ -20,8 +20,14 @@ class PurchasesController extends AppController {
      */
 
     public function indexOfStaff() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
+
         $this->Purchase->recursive = 0;
         $this->paginate = array(
             'limit' => 12,
@@ -34,8 +40,14 @@ class PurchasesController extends AppController {
 
 
     public function indexOfMember() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
+
         $this->Purchase->recursive = 0;
         $this->paginate = array(
             'limit' => 12,
@@ -59,6 +71,11 @@ class PurchasesController extends AppController {
      * @return void
      */
     public function view($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if (!$this->Purchase->exists($id)) {
@@ -73,6 +90,11 @@ class PurchasesController extends AppController {
      * @return void
      */
     public function add() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if ($this->request->is('post')) {
@@ -108,7 +130,7 @@ class PurchasesController extends AppController {
                 $this->Flash->set('Thêm giao dịch mới thành công', array('key'=>'addPurchaseSuccess'));
                 $this->redirect(array('action' => 'indexOfStaff'));
             } else {
-                $this->Flash->set('KHÔNG THỂ THÊM GIAO DỊCH', array('key'=>'addPurchaseFailure'));
+                $this->Flash->set('Không thể thêm giao dịch', array('key'=>'addPurchaseFailure'));
             }
         }
 
@@ -124,6 +146,11 @@ class PurchasesController extends AppController {
      * @return void
      */
     public function edit($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if (!$this->Purchase->exists($id)) {

@@ -781,6 +781,7 @@ hr.style18:before {
     border-radius: 50%;
     width: 18px;
     height: 17px;
+    border: rgba(224, 134, 159, 0.7) 1px solid;
 }
 .post{
     background-color: #ffe9ec;
@@ -1583,4 +1584,14 @@ hr.style18:before {
 .login-icon {
     width: 18px !important;
     height: 17px !important;
+}
+
+.notification {
+    background: #54ba54;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    color: white;
+    width: 400px;
+    margin-left: 38%;
 }

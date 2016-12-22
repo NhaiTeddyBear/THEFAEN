@@ -35,13 +35,14 @@ class Post extends AppModel {
 		'body' => array(
 			'notBlank' => array(
 				'rule' => array('notBlank'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+            ),
 		),
+        'image' => array(
+            'notBlank' => array(
+                'rule' => array('notBlank'),
+                'message' => 'Bạn chưa thêm ảnh đại diện',
+            ),
+        ),
 	);
 
 	// The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -88,6 +89,8 @@ class Post extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+
+
 
 	public function isOwnedBy($post, $user) {
 		return $this->field('id', array('id' => $post, 'user_id' => $user)) !== false;

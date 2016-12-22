@@ -7,6 +7,11 @@ class FoodsController extends AppController{
 
     // for view all products
     public function indexOfManager1() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         $this->Food->recursive = 0;
@@ -21,6 +26,11 @@ class FoodsController extends AppController{
 
 
     public function indexOfMember(){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if($food = $this->Food->findAllByCategory_id(3)) {
@@ -35,6 +45,11 @@ class FoodsController extends AppController{
     //when people click on name of any products, this will show them all information
     //of that product
     public function view($id=null){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if(!$id){
@@ -50,6 +65,11 @@ class FoodsController extends AppController{
      * function add to add more Foods
      */
     public function add() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if ($this->request->is('post')) {
@@ -94,6 +114,11 @@ class FoodsController extends AppController{
      * function edit
      */
     public function edit($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if (!$id) {
@@ -189,6 +214,21 @@ class FoodsController extends AppController{
                 return true;
             }
             return parent::isAuthorized($user);
+        }
+    }
+
+    public function search()
+    {
+        if ($this->request->is('post')) {
+            $food = $this->request->data['Food']['name'];
+            $foods = $this->Food->search($food);
+            if(count($foods) > 0) {
+                $this->set('foods', $foods);
+            }
+            else
+            {
+                $this->Flash->set('Không tìm thấy kết quả nào!', array('key'=>'noresult'));
+            }
         }
     }
 }

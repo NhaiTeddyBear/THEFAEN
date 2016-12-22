@@ -14,21 +14,12 @@ class UsersController extends AppController {
     public function login() {
 		if($this->request->is('post')){
 			if($this->Auth->login()){
-				if($this->Auth->user('role') === 'Manager'){
-					$this->redirect(array('action'=>'home'));
-				}
-				if($this->Auth->user('role') === 'Staff'){
-					$this->redirect(array('action'=>'home'));
-				}
-				if($this->Auth->user('role') === 'Member'){
-					$this->redirect(array('action'=>'home'));
-				}
+		        $this->redirect(array('action'=>'home'));
 			}
 			else {
 				$this->Flash->error(__('Sai tài khoản hoặc mật khẩu'));
 				$this->set('error', 'Sai tài khoản hoặc mật khẩu');
 			}
-
 		}
 	}
 
@@ -39,7 +30,7 @@ class UsersController extends AppController {
 	public function logout(){
 		return $this->redirect($this->Auth->logout());
 	}
-/********-------------------------------------end common function that both Manager, Staff and Member users have-----------------------------***/
+/********-----end common function that both Manager, Staff and Member users have-------------------***/
 
 /****--------------------------Manager users function-----------------------------------------***/
 	/**** if recent manager is the boss(id=constant, now is 7), will own some function****/
@@ -47,6 +38,11 @@ class UsersController extends AppController {
 	 * list manager
 	 */
 	public function listManager() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		$this->set('users', $this->User->find('all', array('conditions'=>array('role'=>'Manager'))));
@@ -56,6 +52,11 @@ class UsersController extends AppController {
 	 * @ add new manger
 	 */
 	public function addManager(){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if ($this->request->is('post')) {
@@ -88,6 +89,11 @@ class UsersController extends AppController {
 	}
 
 	public function editManager($id = null){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$this->User->exists($id)) {
@@ -140,7 +146,6 @@ class UsersController extends AppController {
 				__('Quản lý có id: %s không thể xóa.', h($id))
 			);
 		}
-
 		$this->redirect(array('action' => 'listManager'));
 	}
 
@@ -148,6 +153,11 @@ class UsersController extends AppController {
 	 * list all staff
 	 */
 	public function listStaff() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		$this->paginate = array(
@@ -164,6 +174,11 @@ class UsersController extends AppController {
 	 * @param $id
 	 */
 	public function viewManager($id){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$id) {
@@ -185,6 +200,11 @@ class UsersController extends AppController {
  * @return void
  */
 	public function viewStaff($id) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$id) {
@@ -204,6 +224,11 @@ class UsersController extends AppController {
  * @return void
  */
 	public function addStaff() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if ($this->request->is('post')) {
@@ -245,6 +270,11 @@ class UsersController extends AppController {
  * @return void
  */
 	public function editStaff($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$this->User->exists($id)) {
@@ -313,6 +343,11 @@ class UsersController extends AppController {
 	 * @return this is the page of staff
 	 */
 	public function indexOfStaff(){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		$this->set('users', $this->User->find('all', array('conditions'=>array('role'=>'Member'))));
@@ -327,6 +362,11 @@ class UsersController extends AppController {
 	 */
 
 	public function listMember() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		$this->Paginator->settings = array(
@@ -341,6 +381,11 @@ class UsersController extends AppController {
 
 
 	public function viewMember($id) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$id) {
@@ -360,6 +405,11 @@ class UsersController extends AppController {
 	 * @return void
 	 */
 	public function addMember() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if ($this->request->is('post')) {
@@ -401,6 +451,11 @@ class UsersController extends AppController {
 	 * @return void
 	 */
 	public function editMember($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$this->User->exists($id)) {
@@ -465,6 +520,10 @@ class UsersController extends AppController {
 	 * @return this is the page of Member
 	 */
 	public function home(){
+	    //show Avatar
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
 	    $this->setHeader($user);
 
@@ -500,13 +559,18 @@ class UsersController extends AppController {
             'food_id' => 97,
         );
         $this->request->data['Order']['food_id'] = 97;
-	}
+    }
 
 
 	/**
 	 * view personal profile
 	 */
 	public function viewProfile(){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		$user = $this->User->findById($this->Auth->user('id'));
@@ -517,6 +581,11 @@ class UsersController extends AppController {
 	 * edit personal profile
 	 */
 	public function editProfile($id = null){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if (!$this->User->exists($id)) {

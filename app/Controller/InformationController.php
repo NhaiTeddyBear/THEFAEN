@@ -9,6 +9,11 @@ App::uses('AppController','Controller');
 class InformationController extends AppController {
 
     public function add() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         if ($this->request->is('post')) {
@@ -22,6 +27,11 @@ class InformationController extends AppController {
         }
     }
     public function view(){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         $content = $this->Information->findById(1);
@@ -29,6 +39,11 @@ class InformationController extends AppController {
     }
 
     public function edit(){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         $content = $this->Information->findById(1);

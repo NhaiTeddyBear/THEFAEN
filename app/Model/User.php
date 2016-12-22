@@ -62,8 +62,18 @@ class User extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 				),
-			)
-		);
+        ),
+        'phone_number' => array(
+            'rule' => array('maxLength', '14'),
+            'message' => 'Số điện thoại không được quá 15 ký tự'
+        ),
+        'avatar' => array(
+            'notBlank' => array(
+                'rule' => array('notBlank'),
+                'message' => 'Bạn chưa thêm ảnh đại diện',
+            ),
+        ),
+    );
 
 	/**
 	 * @param array

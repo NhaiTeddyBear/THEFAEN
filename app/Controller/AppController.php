@@ -36,7 +36,6 @@ class AppController extends Controller
     public $layout ='managerCommon';
 
     public function setHeader($user){
-
         if ($user['role'] == 'Manager'){
             $this->set('manager', $user);
         }
@@ -62,7 +61,7 @@ class AppController extends Controller
                     'passwordHasher' => 'Blowfish'
                 )
             ),
-            'authorize' => array('Controller')
+           'authorize' => array('Controller')
         )
     );
 
@@ -77,7 +76,7 @@ class AppController extends Controller
     {
         if ($this->action == 'login' || $this->action == 'logout' ||
             $this->action == 'viewProfile' || $this->action =='editProfile' ||
-            $this->action == 'home' || $this->action == 'register') {
+            $this->action == 'home' || $this->action == 'register' || $this->action == 'showAvatar') {
             return true;
         }
 

@@ -21,6 +21,11 @@ class SchedulesController extends AppController {
  * @return void
  */
     public function indexOfManager1() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         $this->Paginator->settings = array(
@@ -34,6 +39,11 @@ class SchedulesController extends AppController {
 
 
     public function indexOfStaff(){
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
         $this->Paginator->settings = array(
@@ -56,6 +66,11 @@ class SchedulesController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$this->Schedule->exists($id)) {
@@ -71,6 +86,11 @@ class SchedulesController extends AppController {
  * @return void
  */
 	public function add() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if ($this->request->is('post')) {
@@ -119,6 +139,11 @@ class SchedulesController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$this->Schedule->exists($id)) {

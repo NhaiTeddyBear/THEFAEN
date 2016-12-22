@@ -10098,3 +10098,188 @@ Stack Trace:
 #1 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FoodsController), Object(CakeRequest))
 #2 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2016-12-21 16:48:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /thefaen/users/editProfile/3
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('UPDATE `faen`.`...', Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Model\Datasource\Database\Mysql.php(415): DboSource->execute('UPDATE `faen`.`...')
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Model\Model.php(1917): Mysql->update(Object(User), Array, Array)
+#4 C:\xampp\htdocs\thefaen\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 C:\xampp\htdocs\thefaen\app\Controller\UsersController.php(548): Model->save(Array)
+#6 [internal function]: UsersController->editProfile('3')
+#7 C:\xampp\htdocs\thefaen\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-12-21 16:56:33 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\xampp\htdocs\thefaen\app\Model\User.php, line 69]
+2016-12-21 16:56:33 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /thefaen/users/editProfile/3
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 69)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 69, Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 69, Array)
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-12-21 16:57:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /thefaen/users/editProfile/3
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('UPDATE `faen`.`...', Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Model\Datasource\Database\Mysql.php(415): DboSource->execute('UPDATE `faen`.`...')
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Model\Model.php(1917): Mysql->update(Object(User), Array, Array)
+#4 C:\xampp\htdocs\thefaen\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 C:\xampp\htdocs\thefaen\app\Controller\UsersController.php(548): Model->save(Array)
+#6 [internal function]: UsersController->editProfile('3')
+#7 C:\xampp\htdocs\thefaen\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-12-21 18:00:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/img/avatar.png
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 02:36:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/img/.2016-12-22/4.PNG.
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 02:37:08 Error: [MissingControllerException] Controller class AvatarController could not be found.
+Exception Attributes: array (
+  'class' => 'AvatarController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/avatar/.2016-12-22/4.PNG.
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 02:39:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/img/%27/avatar/%27.2016-12-22/4.PNG.%27
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 02:57:33 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\thefaen\app\View\Layouts\managerCommon.ctp, line 63]
+2016-12-22 02:57:34 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /thefaen/information/view
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63, Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63, Array)
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-12-22 03:34:20 Error: Fatal Error (1): Call to undefined method AuthComponent::showAvatar() in [C:\xampp\htdocs\thefaen\app\Controller\UsersController.php, line 459]
+2016-12-22 03:34:20 Error: [FatalErrorException] Call to undefined method AuthComponent::showAvatar()
+Request URL: /thefaen/users/home
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 459)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 459, Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 459, Array)
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-12-22 04:50:30 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'user' at line 1
+Request URL: /thefaen/users/home
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\thefaen\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('user', Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('user', Array, Array)
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Model\Datasource\DboSource.php(614): DboSource->fetchAll('user', Array, Array)
+#4 C:\xampp\htdocs\thefaen\lib\Cake\Model\Model.php(827): DboSource->query('user', Array, Object(User))
+#5 C:\xampp\htdocs\thefaen\app\Controller\UsersController.php(459): Model->__call('user', Array)
+#6 C:\xampp\htdocs\thefaen\app\Controller\UsersController.php(459): User->user('id')
+#7 [internal function]: UsersController->home()
+#8 C:\xampp\htdocs\thefaen\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\thefaen\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-12-22 04:59:11 Error: Fatal Error (1): Call to a member function findById() on null in [C:\xampp\htdocs\thefaen\app\Controller\FoodsController.php, line 25]
+2016-12-22 04:59:12 Error: [FatalErrorException] Call to a member function findById() on null
+Request URL: /thefaen/foods/indexOfMember
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\thefaen\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-12-22 05:15:31 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/1367632205-Da-me8.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 05:15:31 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/tra-quat-mat-ong.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 05:15:31 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/IMG_6532-586x229.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 05:15:40 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/1367632205-Da-me8.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 05:15:41 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/IMG_6532-586x229.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 05:15:41 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/tra-quat-mat-ong.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 05:15:41 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/tra-tahi-do.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

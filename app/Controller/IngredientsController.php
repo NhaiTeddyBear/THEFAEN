@@ -15,6 +15,11 @@ class IngredientsController extends AppController {
  * @return void
  */
 	public function index() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		$this->paginate = array(
@@ -33,6 +38,11 @@ class IngredientsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$this->Ingredient->exists($id)) {
@@ -48,6 +58,11 @@ class IngredientsController extends AppController {
  * @return void
  */
 	public function add() {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if ($this->request->is('post')) {
@@ -69,6 +84,11 @@ class IngredientsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        //show Avatar
+        $this->loadModel('User');
+        $user_avatar = $this->User->findById($this->Auth->user('id'));
+        $this->set('user_avatar', $user_avatar['User']['avatar']);
+
         $user = $this->Auth->user();
         $this->setHeader($user);
 		if (!$this->Ingredient->exists($id)) {
