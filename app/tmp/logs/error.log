@@ -11644,3 +11644,66 @@ Request URL: /thefaen/post/tra-tahi-do.jpg
 Stack Trace:
 #0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-12-22 15:27:50 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/1367632205-Da-me8.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 15:27:50 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/IMG_6532-586x229.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 15:27:50 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/tra-quat-mat-ong.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 15:27:50 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/post/tra-tahi-do.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 18:00:58 Error: [MissingControllerException] Controller class AvatarController could not be found.
+Exception Attributes: array (
+  'class' => 'AvatarController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/avatar/2016-11-25/IMG_1238.JPG
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 18:01:03 Error: [MissingControllerException] Controller class AvatarController could not be found.
+Exception Attributes: array (
+  'class' => 'AvatarController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/avatar/2016-11-25/IMG_1238.JPG
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-12-22 18:01:07 Error: [MissingControllerException] Controller class AvatarController could not be found.
+Exception Attributes: array (
+  'class' => 'AvatarController',
+  'plugin' => NULL,
+)
+Request URL: /thefaen/avatar/2016-11-25/IMG_1238.JPG
+Stack Trace:
+#0 C:\xampp\htdocs\thefaen\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

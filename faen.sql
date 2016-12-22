@@ -2,10 +2,10 @@
 -- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Mer 21 Décembre 2016 à 16:45
--- Version du serveur :  10.1.16-MariaDB
--- Version de PHP :  5.6.24
+-- Host: 127.0.0.1
+-- Generation Time: Dec 22, 2016 at 06:03 PM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `faen`
+-- Database: `faen`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `calendars`
+-- Table structure for table `calendars`
 --
 
 CREATE TABLE `calendars` (
@@ -33,7 +33,7 @@ CREATE TABLE `calendars` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `calendars`
+-- Dumping data for table `calendars`
 --
 
 INSERT INTO `calendars` (`id`, `date`, `food_id`) VALUES
@@ -42,7 +42,7 @@ INSERT INTO `calendars` (`id`, `date`, `food_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -51,7 +51,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id`, `name`) VALUES
@@ -62,7 +62,7 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `comments`
+-- Table structure for table `comments`
 --
 
 CREATE TABLE `comments` (
@@ -76,7 +76,7 @@ CREATE TABLE `comments` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `events`
+-- Table structure for table `events`
 --
 
 CREATE TABLE `events` (
@@ -88,7 +88,7 @@ CREATE TABLE `events` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `events`
+-- Dumping data for table `events`
 --
 
 INSERT INTO `events` (`id`, `name`, `body`, `started_date`, `end_date`) VALUES
@@ -98,7 +98,7 @@ INSERT INTO `events` (`id`, `name`, `body`, `started_date`, `end_date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `feedbacks`
+-- Table structure for table `feedbacks`
 --
 
 CREATE TABLE `feedbacks` (
@@ -112,7 +112,7 @@ CREATE TABLE `feedbacks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `feedbacks`
+-- Dumping data for table `feedbacks`
 --
 
 INSERT INTO `feedbacks` (`id`, `fullname`, `address`, `phone_number`, `email`, `content`, `date_created`) VALUES
@@ -121,7 +121,7 @@ INSERT INTO `feedbacks` (`id`, `fullname`, `address`, `phone_number`, `email`, `
 -- --------------------------------------------------------
 
 --
--- Structure de la table `foods`
+-- Table structure for table `foods`
 --
 
 CREATE TABLE `foods` (
@@ -133,7 +133,7 @@ CREATE TABLE `foods` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `foods`
+-- Dumping data for table `foods`
 --
 
 INSERT INTO `foods` (`id`, `category_id`, `name`, `price`, `image`) VALUES
@@ -155,7 +155,7 @@ INSERT INTO `foods` (`id`, `category_id`, `name`, `price`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `information`
+-- Table structure for table `information`
 --
 
 CREATE TABLE `information` (
@@ -164,7 +164,7 @@ CREATE TABLE `information` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `information`
+-- Dumping data for table `information`
 --
 
 INSERT INTO `information` (`id`, `content`) VALUES
@@ -173,7 +173,7 @@ INSERT INTO `information` (`id`, `content`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `ingredients`
+-- Table structure for table `ingredients`
 --
 
 CREATE TABLE `ingredients` (
@@ -185,7 +185,7 @@ CREATE TABLE `ingredients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `ingredients`
+-- Dumping data for table `ingredients`
 --
 
 INSERT INTO `ingredients` (`id`, `name`, `quantity`, `cost`, `date_bought`) VALUES
@@ -194,7 +194,7 @@ INSERT INTO `ingredients` (`id`, `name`, `quantity`, `cost`, `date_bought`) VALU
 -- --------------------------------------------------------
 
 --
--- Structure de la table `moneys`
+-- Table structure for table `moneys`
 --
 
 CREATE TABLE `moneys` (
@@ -207,7 +207,7 @@ CREATE TABLE `moneys` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `moneys`
+-- Dumping data for table `moneys`
 --
 
 INSERT INTO `moneys` (`id`, `user_id`, `schedule_id`, `aspect`, `amount`, `date_created`) VALUES
@@ -216,7 +216,7 @@ INSERT INTO `moneys` (`id`, `user_id`, `schedule_id`, `aspect`, `amount`, `date_
 -- --------------------------------------------------------
 
 --
--- Structure de la table `orders`
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -230,7 +230,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `orders`
+-- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`id`, `food_id`, `quantity`, `user_id`, `total`, `detail`, `date_created`) VALUES
@@ -258,12 +258,15 @@ INSERT INTO `orders` (`id`, `food_id`, `quantity`, `user_id`, `total`, `detail`,
 (22, 98, 67, 40, 1340000, 'HN', '2016-11-25 14:01:09'),
 (23, 98, 8, 66, 160000, 'Hn', '2016-11-25 15:05:00'),
 (24, 99, 9, 66, 225000, 'Äáº¡i há»c HÃ  Ná»™i', '2016-11-25 15:05:36'),
-(25, 100, 7, 66, 105000, 'fytdá»§td', '2016-11-25 15:09:59');
+(25, 100, 7, 66, 105000, 'fytdá»§td', '2016-11-25 15:09:59'),
+(26, 97, 12, 88, 300000, 'HN', '2016-12-22 21:33:44'),
+(27, 98, 12, 88, 240000, 'HN', '2016-12-22 21:51:35'),
+(28, 98, 4356, 70, 87120000, 'HN', '2016-12-23 00:01:38');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `posts`
+-- Table structure for table `posts`
 --
 
 CREATE TABLE `posts` (
@@ -277,7 +280,7 @@ CREATE TABLE `posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `posts`
+-- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`id`, `title`, `body`, `user_id`, `category_id`, `image`, `date_created`) VALUES
@@ -292,7 +295,7 @@ INSERT INTO `posts` (`id`, `title`, `body`, `user_id`, `category_id`, `image`, `
 -- --------------------------------------------------------
 
 --
--- Structure de la table `purchases`
+-- Table structure for table `purchases`
 --
 
 CREATE TABLE `purchases` (
@@ -306,7 +309,7 @@ CREATE TABLE `purchases` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `purchases`
+-- Dumping data for table `purchases`
 --
 
 INSERT INTO `purchases` (`id`, `food_id`, `price`, `user_id`, `phone_number`, `membership_point`, `date_created`) VALUES
@@ -315,7 +318,7 @@ INSERT INTO `purchases` (`id`, `food_id`, `price`, `user_id`, `phone_number`, `m
 -- --------------------------------------------------------
 
 --
--- Structure de la table `schedules`
+-- Table structure for table `schedules`
 --
 
 CREATE TABLE `schedules` (
@@ -327,7 +330,7 @@ CREATE TABLE `schedules` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `schedules`
+-- Dumping data for table `schedules`
 --
 
 INSERT INTO `schedules` (`id`, `user_id`, `date`, `shift`, `count`) VALUES
@@ -347,7 +350,7 @@ INSERT INTO `schedules` (`id`, `user_id`, `date`, `shift`, `count`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -365,14 +368,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `fullname`, `username`, `password`, `dob`, `phone_number`, `membership_point`, `address`, `avatar`, `role`, `created`) VALUES
-(3, 'ngan2', 'ngan2', '$2a$10$JaMMtr.958hMN/FTxCXAUu67Cgu/L2uZDPhX9aiLdLVMdGUcWq0JO', '2016-09-16', 0, 0, 'nnv', '', 'Manager', '2016-09-16 05:51:39'),
-(4, 'vitadolce', 'ngan3', '$2a$10$cL0BluytC5jqBIqFq/m9vuVRWuq.yxKq9NlGjT6fSzamlTkxrg07a', '2016-09-16', 0, 0, 'hjdksghk', '', 'Manager', '2016-09-16 05:53:36'),
+(3, 'ngan2', 'ngan2', '$2a$10$QDA0SRLoE7NQ6blgOvgAQOdnOnx6syxdGl5LbM64T.n27FWebvFxu', '2016-09-16', 2147483647, 0, 'nnv', '2016-12-21/3.PNG', 'Manager', '2016-09-16 05:51:39'),
+(4, 'vitadolce', 'ngan3', '$2a$10$uS71.sIjtIXadE/on/DSfeOgHfvh8YuSDtcXrOBz2tG/r99acM0Ou', '2016-09-16', 0, 0, 'hjdksghk', '2016-12-22/4.PNG', 'Manager', '2016-09-16 05:53:36'),
 (6, 'ghdkshk', 'hjfdkghkedshk', '$2a$10$MtiSAhF1QWUGwYW7uc/XoeHxDWzMs9qXUrmfL34IA9EQSkrJBs8PG', '2016-09-16', 0, 0, 'fdgegf', '', 'Manager', '2016-09-16 06:03:00'),
-(7, 'sdgasdg', 'hihi', '$2a$10$UfOB3jsJYdPGGwRczpJYmuJ.fR0a007vWrLosyyFQ/WA.xZdRX6bC', '2016-09-16', 0, 0, 'fdgf', '', 'Manager', '2016-09-16 06:20:35'),
+(7, 'sdgasdg', 'hihi', '$2a$10$z5sjX1NM4PAwEJIwU2U0ROo4v/AT3Th.V59Xa1LFRA0N5roG2Kob6', '2016-09-16', 0, 0, 'fdgf', '2016-12-21/3.PNG', 'Manager', '2016-09-16 06:20:35'),
 (16, 'kjfkafk', 'fhkdshgkhk', '$2a$10$Zhwcn4Y5nrxZXEAtl/cAUOhzGMX3ioMKWJrkCo4hY17e9eIZGHhjK', '2016-10-04', 0, 0, 'hvmnhgm', '', 'Manager', '2016-10-04 10:18:12'),
 (17, 'DÆ°Æ¡ng Thá»‹ NhÃ i', 'nhaistaff', '$2a$10$Ow.AM6F8bmbOwPSEwIT0uuikT2Y3KqL6GimGd8m4eruLxICfjqSmS', '1996-06-04', 92738745, 0, 'PhÃ¹ng Khoang', 'IMG_1252.JPG', 'Staff', '2016-10-06 05:46:15'),
 (19, 'Pháº¡m ÄÃ¬nh Sinh', 'sinhstaff', '$2a$10$zDA/3p4Hq91zHEJcBUCjxeDbmval2A11Ke5yim64uOlZlv/IpN8dm', '1996-12-10', 928734965, 0, 'Hanu', 'IMG_1303.JPG', 'Staff', '2016-10-06 05:47:50'),
@@ -394,43 +397,53 @@ INSERT INTO `users` (`id`, `fullname`, `username`, `password`, `dob`, `phone_num
 (54, 'Sinh Pháº¡m', 'sinhpham', '$2a$10$zwN11uT7eXUvgHSK108gb.5avRllHSqX5nYPfdYVZ1I/XwQf1ID8G', '2016-11-25', 0, 0, 'ThÃ¡i BÃ¬nh', '2016-11-25/IMG_1260.JPG', 'Member', '2016-11-25 03:17:38'),
 (55, 'NgÃ¢n NgÃ¢n', 'nganngan', '$2a$10$kVw.x2INO7j2rbw5nh4IWeA5ibdNbPjIdxQhZBVB.PWZyPqMftxfG', '2016-11-25', 0, 0, 'HN', '2016-11-25/IMG_1286.JPG', 'Member', '2016-11-25 06:21:11'),
 (59, 'Tuáº¥nhuhjbjkjk', 'tuan', '$2a$10$zdmtdCIYFOJ//pKHanUxWumrbnlh2Whykos1QvFoptPUZnBZrTcfS', '2016-11-25', 0, 0, 'HN', '2016-11-25/IMG_1280.JPG', 'Member', '2016-11-25 06:45:20'),
-(62, 'Minh Minh', 'minhphan', '$2a$10$Yo0axrvNMKbqOfyyPTiuNOai9hrzN1P2Z4mOSRZh57ZSKnQa5BAX2', '2016-11-25', 0, 0, 'Ba Vi', '2016-11-25/IMG_1297.JPG', 'Member', '2016-11-25 07:19:28'),
+(62, 'Minh Minh', 'minhphan', '$2a$10$Yo0axrvNMKbqOfyyPTiuNOai9hrzN1P2Z4mOSRZh57ZSKnQa5BAX2', '2016-11-25', 0, 0, 'Ba Vi', '2016-11-25/IMG_1297.JPG', 'Manager', '2016-11-25 07:19:28'),
 (64, '', '', '', '0000-00-00', 0, 0, '', '', '', '2016-11-25 07:33:34'),
 (65, '', '', '', '0000-00-00', 0, 0, '', '', '', '2016-11-25 07:33:40'),
 (66, 'HÆ°Æ¡ng', 'huonghuong', '$2a$10$lJF6g5Wq7eFedluq3u3J.ek.lL8tGEVLHGidOdNoMifvxMiAr.Rfi', '2016-11-25', 98735625, 0, 'HN', '2016-11-25/IMG_1259.JPG', 'Member', '2016-11-25 07:48:14'),
 (67, 'ilahsdf', 'iuaohishf8asf', '$2a$10$aail.p0DYgmRpReRAN2YDePAcL2RBHwi3KC4Kod9XuqWWqHnUtIm6', '2016-11-25', 2147483647, 0, 'HN', '2016-11-25/IMG_1293.JPG', 'Member', '2016-11-25 07:53:28'),
 (68, 'Duonkhag', 'ajhfhahfefe', '$2a$10$slUpdkLA4ulptnotRVO4TutoPF308IFT6RIf16hxGE3vAZCw5LdlO', '2016-11-25', 208745275, 0, 'HN', '2016-11-25/IMG_1307.JPG', 'Member', '2016-11-25 08:07:16'),
 (69, 'ljhalsdfadsfafa', 'sdfasdfasfasf', '$2a$10$u2OVGGxsNrKQ23ldRqaI5ObXeAxkbeRacWhlsdjLq796FTjhg6JXW', '2016-11-25', 2147483647, 0, 'akjlhsdhfaf', '2016-11-25/IMG_1248.JPG', 'Member', '2016-11-25 08:08:55'),
-(70, 'wertetwt', 'wertwertt', '$2a$10$VH1NDN5d5JDQnyucojssEeQcfRoUzl5pLZniKlbUY968fxIEXix.y', '2016-11-25', 634565634, 0, 'sgsgf', '2016-11-25/IMG_1238.JPG', 'Member', '2016-11-25 08:09:42'),
+(70, 'wertetwt', 'wertwertt', '$2a$10$5ldC4xgAwqFw0oYeCQMD6.UJAH5buhGFsPSrzCGLdJ/4kVEiKqeDS', '2016-11-25', 634565634, 0, 'sgsgf', '2016-12-22/IMG_1038.JPG', 'Member', '2016-11-25 08:09:42'),
 (71, 'asdfasdf', 'asdfasdfasdf', '$2a$10$sZPl6sEfi3RtjLlzIQVVw.AGpmLDLRyRSbEqi0SLkndZZ8.6PAChO', '2016-11-25', 2147483647, 0, 'asfdfasdf', '2016-11-25/IMG_1239.JPG', 'Member', '2016-11-25 08:11:45'),
 (72, 'gasfsdfsda', 'ewtwfsdfsd', '$2a$10$L4jPu74U..bBVgGhTZxOfu0EikB0T9mAqPr/qpbUM1RDvG/fBaAnO', '2016-05-25', 43543543, 0, 'dfgdfg', '2016-11-25/IMG_0256.JPG', 'Member', '2016-11-25 08:14:34'),
 (73, 'hahahahaah', 'hahaahha', '$2a$10$aE2255Yt6LTTRlt4Z0mFeOlem5xDanCsqTuyQK2JHhk.mUe5lSLKO', '2016-11-25', 5435435, 0, 'rgfdfgd', '2016-11-25/IMG_1243.JPG', 'Member', '2016-11-25 08:16:35'),
 (74, 'nhainhainhai', 'sdfhakjhdsfakdhfskdfskh', '$2a$10$0Jbsv08116xtaeVUWjhhM.Ql5GCxVEWGZ5pb0WEMaGBAC5V0tFTwC', '2016-11-25', 2147483647, 0, 'fgsdfgfdg', '2016-11-25/IMG_1253.JPG', 'Member', '2016-11-25 08:19:43'),
 (75, '', 'jksdflk', '$2a$10$ERvJkmgY5NqFDnXTIekCrOJkAlaafLAk9IeKYDUm6/RwUAoQzBMmK', '0000-00-00', 0, 0, '', '', 'Member', '2016-12-18 16:52:03'),
 (76, '', 'fjkldsjl', '$2a$10$ztYk3HGTawhM5dBmjt2r4edrEHdNieX8DIlaPtVZIX6N3xqgAOe4i', '0000-00-00', 0, 0, '', '', 'Member', '2016-12-18 16:54:12'),
-(77, '', 'nganngan', '$2a$10$zjSSQI8.1BgPJ3SWbgRMJ.2CLYS97btxpZ8gxKJXKqPNtHrrqsO1y', '0000-00-00', 0, 0, '', '', 'Member', '2016-12-18 16:56:47'),
-(78, 'Obama Tráº§n', 'ohanaohana', '$2a$10$G5rbK4PtAUCn/ZxQTotfdOLgnyRsvGWhZwhkohdJmhrawt03Tdlam', '2016-12-20', 2147483647, 0, 'PhÃº Thá»', '2016-12-20/jasmine-tea-benefits.jpg', 'Staff', '2016-12-20 15:34:03');
+(77, '', 'nganngan', '$2a$10$zjSSQI8.1BgPJ3SWbgRMJ.2CLYS97btxpZ8gxKJXKqPNtHrrqsO1y', '0000-00-00', 0, 0, '', '', 'Manager', '2016-12-18 16:56:47'),
+(78, 'Obama Tráº§n', 'ohanaohana', '$2a$10$G5rbK4PtAUCn/ZxQTotfdOLgnyRsvGWhZwhkohdJmhrawt03Tdlam', '2016-12-20', 2147483647, 0, 'PhÃº Thá»', '2016-12-20/jasmine-tea-benefits.jpg', 'Staff', '2016-12-20 15:34:03'),
+(79, 'Nguyá»…n VÄƒn A', 'nguyen123', '$2a$10$BNFCh8cUdpnwo9ARW5ih7u6eqpFOchsULi8DZZd5.dyZzuVDUrT/W', '2016-12-22', 2147483647, 0, 'HN', '2016-12-22/tra-tahi-do.jpg', 'Staff', '2016-12-22 14:48:13'),
+(80, 'Nguyá»…n VÄƒn A', 'nguyen123', '$2a$10$mwIMhftkW5Kb5rX6ey2m1.2QkTtXpwHXgSeeXItqjuRG.BXFMsyji', '2016-12-22', 2147483647, 0, 'HN', '2016-12-22/IMG_1009.JPG', 'Staff', '2016-12-22 14:48:43'),
+(81, 'Nguyá»…n VÄƒn A', 'nguyen123', '$2a$10$vELuzEaornpF4qr.ZHNjRu7Y6HNsyLwQL6.sQo3EwE6ypiopGyChW', '2016-12-22', 2147483647, 0, 'HN', '2016-12-22/IMG_1009.JPG', 'Staff', '2016-12-22 14:49:59'),
+(82, 'Nguyá»…n VÄƒn A', 'nguyen123', '$2a$10$rjH1vuK88nAlzK8BAx0t4.a6NoDpqfY3eKCM3tTa5qSe5ijTLQcCa', '2016-12-22', 2147483647, 0, 'HN', '2016-12-22/IMG_1009.JPG', 'Staff', '2016-12-22 14:50:13'),
+(83, 'Nguyá»…n VÄƒn A', 'nguyen123', '$2a$10$0hwsz8cgDv.wktx9jbTZ4ObLkotpH33V3/3akJTvz3PStPN.GFjdi', '2016-12-22', 2147483647, 0, 'HN', '2016-12-22/IMG_1009.JPG', 'Staff', '2016-12-22 14:52:32'),
+(84, 'Nguyá»…n VÄƒn A', 'nguyen123', '$2a$10$VXmCUyLOnnmRAxPpaw82YOReMZ3Uq10gWH1IuRgHDGjw.1UjUOY7e', '2016-12-22', 280735795, 0, 'HN', '2016-12-22/IMG_1010.JPG', 'Staff', '2016-12-22 14:54:13'),
+(85, 'Nguyá»…n VÄƒn A', 'nguyen123', '$2a$10$BTH3T2owlQLZfe7PwKvo3ubzWI0UHQMKKDsTWovmnYjAm6pDOJsny', '2016-12-22', 280735795, 0, 'HN', '2016-12-22/IMG_1010.JPG', 'Staff', '2016-12-22 14:56:47'),
+(86, 'Nguyá»…n VÄƒn B', 'nhainhainhai', '$2a$10$FXe0rKXzKDS/M7Nnb82VT.pSBWx5ZvT90djH3RiM6H9iDZ8Egu1Hi', '2016-12-22', 927345, 0, 'ljsahdf', '2016-12-22/IMG_1014.JPG', 'Staff', '2016-12-22 14:58:09'),
+(87, 'Nguyá»…n VÄƒn B', 'nhainhainhai', '$2a$10$yl.dhxv8XjWUQvYmIreM8ubSBDjiys37RQobVdATdAU9RvFXlcI7G', '2016-12-22', 927345, 0, 'ljsahdf', '2016-12-22/IMG_1014.JPG', 'Staff', '2016-12-22 14:58:35'),
+(88, 'nganhihi', 'nganhihi', '$2a$10$e3w7LPt6mt1.91sH7Xghbevre90FO7J.410yGfHWXbzroNFTr.WGa', '2016-12-22', 68686868, 0, 'hanu', '2016-12-22/IMG_0341.JPG', 'Member', '2016-12-22 15:24:56');
 
 --
--- Index pour les tables exportées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `calendars`
+-- Indexes for table `calendars`
 --
 ALTER TABLE `calendars`
   ADD PRIMARY KEY (`id`),
   ADD KEY `food_id` (`food_id`);
 
 --
--- Index pour la table `categories`
+-- Indexes for table `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name` (`name`);
 
 --
--- Index pour la table `comments`
+-- Indexes for table `comments`
 --
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`),
@@ -438,38 +451,38 @@ ALTER TABLE `comments`
   ADD KEY `post_id` (`post_id`);
 
 --
--- Index pour la table `events`
+-- Indexes for table `events`
 --
 ALTER TABLE `events`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `feedbacks`
+-- Indexes for table `feedbacks`
 --
 ALTER TABLE `feedbacks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `foods`
+-- Indexes for table `foods`
 --
 ALTER TABLE `foods`
   ADD PRIMARY KEY (`id`),
   ADD KEY `category_id` (`category_id`);
 
 --
--- Index pour la table `information`
+-- Indexes for table `information`
 --
 ALTER TABLE `information`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `ingredients`
+-- Indexes for table `ingredients`
 --
 ALTER TABLE `ingredients`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `moneys`
+-- Indexes for table `moneys`
 --
 ALTER TABLE `moneys`
   ADD PRIMARY KEY (`id`),
@@ -477,14 +490,14 @@ ALTER TABLE `moneys`
   ADD KEY `schedule_id` (`schedule_id`);
 
 --
--- Index pour la table `orders`
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `posts`
+-- Indexes for table `posts`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
@@ -492,7 +505,7 @@ ALTER TABLE `posts`
   ADD KEY `category_id` (`category_id`);
 
 --
--- Index pour la table `purchases`
+-- Indexes for table `purchases`
 --
 ALTER TABLE `purchases`
   ADD PRIMARY KEY (`id`),
@@ -500,106 +513,106 @@ ALTER TABLE `purchases`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `schedules`
+-- Indexes for table `schedules`
 --
 ALTER TABLE `schedules`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `calendars`
+-- AUTO_INCREMENT for table `calendars`
 --
 ALTER TABLE `calendars`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT pour la table `categories`
+-- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT pour la table `events`
+-- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT pour la table `feedbacks`
+-- AUTO_INCREMENT for table `feedbacks`
 --
 ALTER TABLE `feedbacks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT pour la table `foods`
+-- AUTO_INCREMENT for table `foods`
 --
 ALTER TABLE `foods`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 --
--- AUTO_INCREMENT pour la table `information`
+-- AUTO_INCREMENT for table `information`
 --
 ALTER TABLE `information`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT pour la table `ingredients`
+-- AUTO_INCREMENT for table `ingredients`
 --
 ALTER TABLE `ingredients`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT pour la table `moneys`
+-- AUTO_INCREMENT for table `moneys`
 --
 ALTER TABLE `moneys`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT pour la table `orders`
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
--- AUTO_INCREMENT pour la table `posts`
+-- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
--- AUTO_INCREMENT pour la table `purchases`
+-- AUTO_INCREMENT for table `purchases`
 --
 ALTER TABLE `purchases`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
--- AUTO_INCREMENT pour la table `schedules`
+-- AUTO_INCREMENT for table `schedules`
 --
 ALTER TABLE `schedules`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
--- AUTO_INCREMENT pour la table `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 --
--- Contraintes pour les tables exportées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `moneys`
+-- Constraints for table `moneys`
 --
 ALTER TABLE `moneys`
   ADD CONSTRAINT `moneys_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `moneys_ibfk_2` FOREIGN KEY (`schedule_id`) REFERENCES `schedules` (`id`);
 
 --
--- Contraintes pour la table `orders`
+-- Constraints for table `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Contraintes pour la table `schedules`
+-- Constraints for table `schedules`
 --
 ALTER TABLE `schedules`
   ADD CONSTRAINT `schedules_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);

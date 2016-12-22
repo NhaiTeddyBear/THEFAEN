@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>The Faen</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.fontawesome.com/724d9feeda.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&amp;subset=vietnamese" rel="stylesheet">
+  </head>
+  
+  <body>
+    <!-- main-header -->
+    <header class="main-header">
+      <a href="index.html" class="selected"><img src="images/logo.png" alt="Logo" id="logo"></a>
+      <ul class="main-nav">
+        <li><a href="index.html" class="selected">Trang chủ</a></li>
+        <li><a href="thuc-don.html">Thực đơn</a></li>
+        <li><a href="lien-he.html">Liên hệ</a></li>
+        <li><a href="tin-tuc.html">Tin tức</a></li>
+        <li><a href="khuyen-mai.html">Khuyến mại</a></li>
+        <li class="dropdown">
+			   <a href="#" class="dropbtn">Quản lý</a>
+			   <div class="dropdown-content">
+				  <a href="#">Quản lý nhân viên</a>
+				  <a href="#">Quản lý đồ ăn</a>
+				  <a href="#">Quản lý lịch làm việc</a>
+				  <a href="#">Quản lý sự kiện</a>
+				  <a href="#">Quản lý tiền</a>
+			   </div>
+		    </li>
+        <li class="dropdown">
+			   <a href="#" class="dropbtn"><img src="images/Nylon%20Rainbow.jpg" alt="avatar" width="18px" height="17px" id="avatar"></a>
+			   <div class="dropdown-content">
+				  <a href="#">Tài khoản</a>
+				  <a href="#">Đơn hàng</a>
+          <a href="#">Đăng xuất</a>
+			   </div>
+		    </li>
+      </ul>
+    </header><!--/.main-header-->
+    
+    <!--  Main Section  -->
+    <div class="tin-tuc-single">
+      <h2 class="soba">Mì Nhật Bản (Mì Soba)</h2>
+      <img class="mi-soba" src="images/mi-nhat-ban.jpg" alt="Mi Nhat Ban">
+      <p>
+        Mì Soba là món mì truyền thống của Nhật Bản được làm từ kiều mạch, cùng với Sushi, Tempura làm nên những món ăn tiêu biểu của Nhật Bản. Các loại mì Soba phát triển đa dạng từ mì nóng đến mì lạnh, loại Morisoba hay Yazarusoba cũng rất phổ biến. Nếu có những nhà hàng đặc thù về Soba, thì cũng có loại mì Soba ăn đứng, và loại mì ly chỉ cần đổ nước sôi vào là có thể thưởng thức. Chúng được bày bán và trở thành một trong những món ăn đang tồn tại trong đời sống ẩm thực của người Nhật.
+      </p>
+      <p>
+        Đây là món ăn ngon miệng rất phổ biến tại Nhật. Người Nhật Bản có phong tục ăn mỳ Soba vào ngày cuối cùng trong năm để tiễn năm cũ, đón một năm mới may mắn và sức khỏe. Sợi mỳ soba dài và dai còn biểu tượng cho sự trường thọ của con người, cho nên mỳ soba cũng được coi là biểu tượng cho sự may mắn.
+      </p>
+      <p>
+        Mì soba được làm từ một loại ngũ cốc có tên là soba. Mì soba có thể dùng theo 2 cách, ăn lạnh, gọi là zaru soba, hoặc ăn nóng ngay sau khi nấu, gọi là kake soba. Quy trình mì được làm bằng cách trộn bột kiều mạch và bột mỳ, rồi nhào và lăn cho mỏng rồi cắt thành những sợi nhỏ. Mỳ lạnh là mỳ luộc chín, chấm với nước tương, củ cải mài, thêm mù tạt với vài cọng hành. Mỳ Soba lạnh được ăn kèm với sợi nori (rong biển) và với củ Yam (khoai tây núi) bào mịn.
+      </p>
+      <h3>Bình luận</h3>
+      
+      <form action="#" method="post" class="comment">
+        <legend>Bình luận của bạn sẽ được duyệt trước khi đăng lên</legend>
+        <label for="name">Tên</label>
+        <input type="text" id="name" name="name">
+        <label for="mail">Email</label>
+        <input type="email" id="email" name="email">
+        <label for="noi-dung">Nội dung</label>
+        <textarea rows="3" cols="10" id="noi-dung" name="noi-dung"></textarea>
+        <div class="button-group">
+          <button type="button" class="modify-button btn modify">Gửi bình luận</button>
+          <button type="button" class="cancel-button btn cancel">Hủy</button>
+        </div>
+      </form>
+    </div>
+    <!--  End Main Section  -->
+    
+    <!--  Footer  -->
+    <footer class="main-footer">
+      <div class="social-links">
+        <a href="#"><img src="images/facebook-wrap.png" alt="Facebook Logo" class="social-icon"></a>
+        <a href="#"><img src="images/instagram-wrap.png" alt="Instagram Logo" class="social-icon"></a>
+      </div>
+      <div class="address">
+        <p>Ngõ A7, Đại học Hà Nội, Nguyễn Trãi, Thanh Xuân</p>
+        <p>
+          23 Liễu Giai, Ba Đình, Hà Nội
+        </p>
+      </div>
+      <div class="email">
+        <p>Hotline: <a href="tel:123456789">123456789</a></p>
+        <p>Email: <a href="mailto:abcd@gmail.com">abcd@gmail.com</a></p>
+      </div>
+    </footer>
+    <!--  End Footer  -->
+  </body>
+</html>
